@@ -7,7 +7,7 @@ These docs are to be generated using the Spyinx Python static HTML site generato
 
 The documentation HTML website can be found here:
 
-- https://celbridge.github.io/celbridge-docs/
+- https://celbridge-org.github.io/celbridge-docs/
 
 
 ## Acknowledgements
