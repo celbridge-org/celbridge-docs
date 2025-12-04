@@ -3,6 +3,8 @@ Using the console
 
 Celbridge comes with a CLI (Command Line Interface) **Terminal** panel. The prompt in this terminal comprising 3 greater-than signs **>>>**.
 
+The console panel is rendered using `Xterm`_.js hosted in a WebView2
+
 The terminal is where you'll see messages from Celbridge, such as the status of loading new extensions or a different version of Python if you change the project settings and re-load the project.
 
 .. image:: /images/console.png
@@ -75,5 +77,9 @@ Learn more about REPLs and this console at:
 .. _repl: https://en.wikipedia.org/wiki/Replit
 .. _cli: https://en.wikipedia.org/wiki/Command-line_interface
 .. _make: https://en.wikipedia.org/wiki/Make_(software)
+.. _Xterm: https://xtermjs.org/
+
+
 
 .. _Sphinx: https://www.formosa1544.com/2019/09/19/use-sphinx-for-python-documentation/
+
