@@ -1,0 +1,44 @@
+{% extends "!layout.html" -%}
+{# Refer to https://github.com/readthedocs/sphinx_rtd_theme/blob/master/sphinx_rtd_theme/layout.html #}
+
+{% block htmltitle -%}
+<title>{{ godot_title_prefix }}{{ title|striptags|e }}{{ titlesuffix }}</title>
+{% endblock -%}
+
+{% block extrahead -%}
+<meta name="doc_version" content="{{ version }}" />
+<meta name="doc_is_latest" content="{{ godot_is_latest }}" />
+<meta name="doc_pagename" content="{{ pagename }}" />
+{% endblock -%}
+
+{% block linktags -%}
+  <meta name="theme-color" content="#3d8fcc" />
+  {{ super() }}
+{% endblock -%}
+
+{%- block document %}
+<div itemprop="articleBody">
+
+  <div class="admonition-grid">
+    <div class="admonition attention article-status">
+      <p class="first admonition-title">
+          Work in progress -
+          Celbridge is still in **early development**
+      </p>
+      <p>
+        Celbridge is still in **early development**. Any update may introduce incompatibilities with previous versions or breaking architectural changes, so always back up any data before upgrading.
+      </p>
+      <p>
+        Check the status of the Celbridge on the project
+        <a href="https://github.com/celbridge-org/celbridge">GitHub repo</a>
+
+      </p>
+    </div>
+  </div>
+
+  {% block body %}{% endblock %}
+
+
+
+</div>
+{%- endblock %}

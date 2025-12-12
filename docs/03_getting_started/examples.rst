@@ -1,5 +1,5 @@
-Examples 
-============
+The Examples Project
+====================
 
 Each Celbridge release includes an example project that demonstrates the core features of Celbridge. Access this example project as follows: 
 

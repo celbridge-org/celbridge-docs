@@ -10,18 +10,18 @@ The steps below show how to setup a Sphinx project in Celbridge.
 
     - ensure you wrap double-quotes around the package name.
 
-2. Open the `.celbridge` project settings file to add the `sphinx` and `sphinx_rtd_theme` PIP packages:
+2. Open the `.celbridge` project settings file, and for the **project** section, add to the **dependencies** the list of these 2 packages: `sphinx` and `sphinx_rtd_theme`:
 
-    .. code:: 
+    .. code::
 
-        [python]
-        version = "3.13.6"
-        packages = ["sphinx", "sphinx_rtd_theme"]
+        [project]
+        requires-python = "3.12"
+        dependencies = ["sphinx", "sphinx_rtd_theme"]
 
-3. Reload the project:
-    - navigate to the hambuger menu in the top left and click `Reload project`. 
+3. After a second or two Celbridge will detect you have changed the project settings file, and in the **Console** you'll be offered a button to `Reload project`.
 
-4. The console window will show Sphyinx being installed. 
+    - Click this button to reload the project with the new settings.
+    - The console window will show Sphyinx being installed.
 
 5. Run the quickstart, by typing `!sphinx-quickstart` in the **Console**:
     - you'll need to enter some details such as:
@@ -33,7 +33,7 @@ The steps below show how to setup a Sphinx project in Celbridge.
             - e.g. Matt Smith
         - project release
             - you can jut hit return, 
-            - or give a verison number like 1.0
+            - or give a version number like 1.0
         - project language 
             - default is English, so you can hit return, 
             - or enter 2-character language code)
@@ -158,7 +158,7 @@ Here's the output I got when runnning this quickstart:
 
 Acknowledgements
 
-This `sphinx_guide`_ was useful in creating this documenqation page.
+This `sphinx_guide`_ was useful in creating this documentation page.
 
 
 

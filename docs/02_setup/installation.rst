@@ -1,5 +1,8 @@
-Installation 
+.. _doc_installation:
+
+Installation
 ============
+
 
 Celbridge is distributed as a `.msix` installer for Windows.
 
@@ -15,3 +18,11 @@ Celbridge is distributed as a `.msix` installer for Windows.
 
 .. _celbridge.org: https://www.celbridge.org/
 .. _downloads page: https://www.celbridge.org/download
+
+
+
+You can find the current and past releases at the Celbridge project Github site: |github|
+
+.. |github| image:: /images/github-mark.svg
+    :width: 5%
+    :target:  https://github.com/celbridge-org/celbridge/
