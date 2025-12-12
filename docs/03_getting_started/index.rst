@@ -71,7 +71,7 @@ Documents Panel
 
 * View and edit open documents in the documents panel. **Double-click on a file** in the explorer panel to **open it** in the documents panel.
 * You can tab between multiple open documents.
-* Celbridge includes a fully-featured text editor based on [Monaco](https://microsoft.github.io/monaco-editor/), the editor used in [Visual Studio Code](https://code.visualstudio.com/).
+* Celbridge includes a fully-featured text editor based on `Monaco <https://microsoft.github.io/monaco-editor/>`_, the editor used in `Visual Studio Code <https://code.visualstudio.com/>`_.
 * The text editor supports all popular text formats and programming languages.
 * The documents panel also provides a live preview for Markdown.
 
