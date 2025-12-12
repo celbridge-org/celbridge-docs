@@ -44,7 +44,15 @@ The steps to create a project from the hamburger menu are identical: just click 
 The Celbridge Editor
 --------------------
 
-Let's explore the Celbridge editor. Open the project you created in the `Creating a Project` step. From left to right, top to bottom, the sections of the Celbridge editor are as follows:
+Let's explore the Celbridge editor.
+
+
+.. image:: /03_getting_started/images/ui_areas.jpg
+    :alt: Annotated screenshot showing Celbridge UI areas
+..     :width: 50%
+
+
+Open the project you created in the `Creating a Project` step. From left to right, top to bottom, the sections of the Celbridge editor are as follows:
 
 Navigation Bar
 ^^^^^^^^^^^^^^
