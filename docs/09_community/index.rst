@@ -3,12 +3,12 @@
 Community
 =========
 
-Discouse
---------
+Discourse
+---------
 
 
 
-To learn, and take part in, dscussions about Celbridge visit the community pages at the Celbridge community Discouse site: |discourse|
+To learn, and take part in, dscussions about Celbridge visit the community pages at the Celbridge community Discourse site: |discourse|
 
 
 .. |discourse| image:: /images/discourse_logo.svg
