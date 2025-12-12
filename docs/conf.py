@@ -20,10 +20,10 @@ release = '0.1'
 
 extensions = [
     "sphinx_rtd_theme",
-    "notfound.extension",
-    "sphinx_copybutton",
 ]
 
+#     "notfound.extension",
+#     "sphinx_copybutton",
 #     "sphinx_new_tab_link",
 
 # open extenal links in NEW TAB
