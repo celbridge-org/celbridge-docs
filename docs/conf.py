@@ -20,14 +20,14 @@ release = '0.1'
 
 extensions = [
     "sphinx_rtd_theme",
+    "sphinx_new_tab_link",
 ]
 
 #     "notfound.extension",
 #     "sphinx_copybutton",
-#     "sphinx_new_tab_link",
 
 # open extenal links in NEW TAB
-# new_tab_link_show_external_link_icon = True
+new_tab_link_show_external_link_icon = True
 
 templates_path = ['_templates']
 exclude_patterns = []
