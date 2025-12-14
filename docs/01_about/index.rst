@@ -60,7 +60,7 @@ This documentation is organized into several sections:
 - **Community**
     details of how to connect with the Celbridge community.
 
-
+We hope you find Celbridge easy to use and useful.
 
 All documentation content is licensed under the permissive Creative Commons Attribution 4.0 International
 (`CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_) license,
