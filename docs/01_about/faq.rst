@@ -89,7 +89,9 @@ How can I extend Celbridge?
 The development team are working on a powerful, flexible extension architecture.
 
 Learn where we are in development at:
+
 - `the Github repo issues <https://github.com/celbridge-org/celbridge/issues>`_
+
 - the Celbridge community `Discourse forum <https://celbridge.discourse.group/>`_
 
 
