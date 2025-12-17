@@ -8,8 +8,11 @@
 
         Any update may introduce incompatibilities with previous versions or breaking architectural changes, so always back up any data before upgrading.
 
-        Check the status of the Celbridge on the project
-        `GitHub repo <https://github.com/celbridge-org/celbridge>`_
+        Check the status of the Celbridge project at the **Celbridge application** at the project's Github site: |github|
+
+        .. |github| image:: /images/github-mark.svg
+            :width: 5%
+            :target:  https://github.com/celbridge-org/celbridge/
 
 Celbridge Docs
 ==============
@@ -17,18 +20,11 @@ Celbridge Docs
 Welcome to the offical documentation pages for of
 `Celbridge <https://www.celbridge.org/>`__, the free and open source community-driven Python and data pipline workbench application.
 
-You can find the source code to the **Celbridge application** at the project's Github site: |github|
-
-.. |github| image:: /images/github-mark.svg
-    :width: 5%
-    :target:  https://github.com/celbridge-org/celbridge/
-
-
 You can find the source code to this **Celbridge docs** project at: |github_docs|
 
 .. |github_docs| image:: /images/github-mark.svg
     :width: 5%
-    :target:  https://celbridge-org.github.io/celbridge-docs/
+    :target:  https://github.com/celbridge-org/celbridge-docs
 
 
 The table of contents in the sidebar should let you easily access the documentation
