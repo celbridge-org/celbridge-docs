@@ -21,6 +21,7 @@ release = '0.1'
 extensions = [
     "sphinx_rtd_theme",
     "sphinx_new_tab_link",
+    "sphinx_copybutton"
 ]
 
 #     "notfound.extension",

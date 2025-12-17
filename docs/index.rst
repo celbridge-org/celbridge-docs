@@ -3,6 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+
+.. attention:: Work in progress - Celbridge is still in **early development**
+
+        Any update may introduce incompatibilities with previous versions or breaking architectural changes, so always back up any data before upgrading.
+
+        Check the status of the Celbridge on the project
+        `GitHub repo <a href="https://github.com/celbridge-org/celbridge">`_
+
 Celbridge Docs
 ==============
 
