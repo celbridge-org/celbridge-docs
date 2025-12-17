@@ -6,7 +6,7 @@ The docs can be found published via Github pages at:
 - https://celbridge-org.github.io/celbridge-docs/
 
 ## This repo is a Celbridge project - you can build the docs in Celbridge :-)
-These docs are to be generated using the Spinx Python static HTML site generator, in a Celbridge project:
+These docs are to be generated using the Spinx Python static HTML site generator, in a Celbridge project (dogfooding :-):
 
 1. clone repo locally
 
