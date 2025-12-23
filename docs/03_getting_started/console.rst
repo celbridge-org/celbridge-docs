@@ -51,7 +51,7 @@ This terminal offers a full Python `REPL <https://en.wikipedia.org/wiki/Read%E2%
 CLI commands
 ------------
 
-It also offers a range of commands for running CLI programs, available using the bang "`!`" character. Examples including:
+It also offers a range of commands for running CLI programs, available using the bang "`!`" (`exclamation mark <https://en.wikipedia.org/wiki/Exclamation_mark>`_) character. Examples including:
 
 1. Directory list (in this example I'm working from an **X:** drive in a Celbridge project named **celbridge_sample**):
 
@@ -89,5 +89,6 @@ Learn more about REPLs and this console at:
 
 The IPython documentation pages provide 
 a `full list of the magic commands <https://ipython.readthedocs.io/en/stable/interactive/magics.html>`_
+
 
 
