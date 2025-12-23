@@ -16,7 +16,7 @@ Celbridge comes with a  **Console** panel offering a CLI (Command Line Interface
 
 .. sidebar:: The IPython REPL
 
-    The console panel is rendered using `Xterm.js <https://xtermjs.org/>`_ hosted in a WebView2. The Xterm.js terminal is connected to a terminal emulator session via `ConPTY <https://devblogs.microsoft.com/commandline/windows-command-line-introducing-the-windows-pseudo-console-conpty/>`_ which is hosting a Python process. The REPL environment is implemented using `IPython <https://ipython.org/>`_ (the same tech used in `Jupyter Notebooks <https://jupyter.org/>`_). The IPython REPL is a full replacement for the built-in Python REPL that adds a lot of useful functionality. We support all the standard IPython magic commands, such as %run, !, %ls, etc. Here's a `full list <https://ipython.readthedocs.io/en/stable/interactive/magics.html>`_.
+    The console panel is rendered using `Xterm.js <https://xtermjs.org/>`_ hosted in a WebView2. The Xterm.js terminal is connected to a terminal emulator session via `ConPTY <https://devblogs.microsoft.com/commandline/windows-command-line-introducing-the-windows-pseudo-console-conpty/>`_ which is hosting a Python process. The REPL environment is implemented using `IPython <https://ipython.org/>`_ (the same tech used in `Jupyter Notebooks <https://jupyter.org/>`_). The IPython REPL is a full replacement for the built-in Python REPL that adds a lot of useful functionality. We support all the standard IPython magic commands, such as %run, !, %ls, etc.
 
 
 
@@ -51,7 +51,7 @@ This terminal offers a full Python `REPL <https://en.wikipedia.org/wiki/Read%E2%
 CLI commands
 ------------
 
-It also offers a range of commands for running CLI programs, available using the band "`!`" character. Examples including:
+It also offers a range of commands for running CLI programs, available using the bang "`!`" character. Examples including:
 
 1. Directory list (in this example I'm working from an **X:** drive in a Celbridge project named **celbridge_sample**):
 
@@ -86,5 +86,8 @@ Learn more about REPLs and this console at:
 - `REPL (Read-Evaluate-Print-Loop) <https://en.wikipedia.org/wiki/Replit>`_
 - `CLI (Command Line Interface (terminal)) <https://en.wikipedia.org/wiki/Command-line_interface>`_
 - `MAKE <https://en.wikipedia.org/wiki/Make_(software)>`_
+
+The IPython documentation pages provide 
+a `full list of the magic commands <https://ipython.readthedocs.io/en/stable/interactive/magics.html>`_
 
 
