@@ -8,6 +8,8 @@ dependencies = [
     "sphinx_new_tab_link",
     "pygments==2.19.2",
     "sphinx-copybutton",
+    "myst-parser",
+    "myst-parser[linkify]"
 ]
 
 [celbridge]

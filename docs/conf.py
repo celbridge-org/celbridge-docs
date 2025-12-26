@@ -21,11 +21,33 @@ release = '0.1'
 extensions = [
     "sphinx_rtd_theme",
     "sphinx_new_tab_link",
-    "sphinx_copybutton"
+    "sphinx_copybutton",
+    "myst_parser",
 ]
 
 #     "notfound.extension",
-#     "sphinx_copybutton",
+
+
+myst_enable_extensions = [
+    "amsmath",
+    "attrs_inline",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "linkify",
+    "replacements",
+    "smartquotes",
+    "strikethrough",
+    "substitution",
+    "tasklist",
+    "substitution"
+]
+
+
+myst_heading_anchors = 3
 
 # open extenal links in NEW TAB
 new_tab_link_show_external_link_icon = True
