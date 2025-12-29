@@ -9,7 +9,7 @@
 project = 'celbridge-docs'
 #copyright = '2025, Celbridge.org'
 copyright = (
-    "2025-presenet - Celbridge community (CC BY 4.0)"
+    "2025-present - Celbridge community (CC BY 4.0)"
 )
 author = 'Celbridge team'
 release = '0.1'
@@ -100,3 +100,4 @@ html_js_files = [
     ('https://plausible.godot.foundation/js/script.file-downloads.outbound-links.js',
      {'defer': 'defer', 'data-domain': 'godotengine.org'}),
 ]
+
