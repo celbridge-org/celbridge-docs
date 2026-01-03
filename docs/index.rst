@@ -17,7 +17,7 @@
 Celbridge Docs
 ==============
 
-Welcome to the offical documentation pages for of
+Welcome to the offical documentation pages for
 `Celbridge <https://www.celbridge.org/>`__, the free and open source community-driven Python and data pipline workbench application.
 
 You can find the source code to this **Celbridge docs** project at: |github_docs|
@@ -86,3 +86,4 @@ Here's a screenshot of Celbridge in action:
    :name: sec-community
 
    09_community/index
+
