@@ -93,7 +93,7 @@ where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
    > |____Makefile
    > ```
    >
-   > - `build` is empty - this is where your generated HTML page go
+   > - `build` is empty - this is where your generated HTML pages go
    > - `/source/index.rst` - this is your index page and also navigation page list
    >   : - you'll add new pages to be linked in this file
 
@@ -161,3 +161,4 @@ This [sphinx_guide] was useful in creating this documentation page.
 
 [rst_guide]: https://restructuredtext-guide.readthedocs.io/en/latest/ch_syntax.html
 [sphinx_guide]: https://www.formosa1544.com/2019/09/19/use-sphinx-for-python-documentation/
+
