@@ -40,6 +40,8 @@ This terminal offers a full Python [REPL](https://en.wikipedia.org/wiki/Read%E2%
 
 ## CLI commands
 
+### CLI bang `%` commands
+
 It also offers a range of commands for running CLI programs, available using the bang "`!`" ([exclamation mark](https://en.wikipedia.org/wiki/Exclamation_mark)) character. Examples including:
 
 1. Directory list (in this example I'm working from an **X:** drive in a Celbridge project named **celbridge_sample**):
@@ -71,11 +73,43 @@ It also offers a range of commands for running CLI programs, available using the
 **TIP** Use \<CTRL>+L to clear the console
 :::
 
+### IPython built-in "magic" `%` commands
+
+IPython offers a range of commands for running CLI programs, available using the percent "`%`" character. Examples including:
+
+1. Print Working Direcotry (`pwd`):
+
+   > ```
+   > >>> %pwd
+   > 'C:\\Mac\\Home\\Documents\\github\\celbridge-docs'
+   >
+   > >>> 
+   > ```
+
+
+1. Change Direcotry (`cd`):
+
+   > ```
+   > >>> %pwd
+   > 'C:\\Mac\\Home\\Documents\\github\\celbridge-docs'
+   >
+   > >>> %cd ..
+   > C:\Mac\Home\Documents\github
+   >
+   > >>> %pwd
+   > 'C:\\Mac\\Home\\Documents\\github'
+   >
+   > >>>
+   > ```
+
+
+The IPython documentation pages provide
+a [full list of the magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
+
+
 Learn more about REPLs and this console at:
 
 - [REPL (Read-Evaluate-Print-Loop)](https://en.wikipedia.org/wiki/Replit)
 - [CLI (Command Line Interface (terminal))](https://en.wikipedia.org/wiki/Command-line_interface)
 - [MAKE](<https://en.wikipedia.org/wiki/Make_(software)>)
 
-The IPython documentation pages provide
-a [full list of the magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)

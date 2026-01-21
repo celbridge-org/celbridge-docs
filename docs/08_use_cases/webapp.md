@@ -28,3 +28,16 @@ This use case example shows you how to create a web application file, set its de
 % :alt: Screenshot showing Console output of running hello.py script
 
 Congratulations - you've created and set a URL for a Web Application file using Celbridge!
+
+
+## Chromium Console
+
+The web view in Celbridge includes the Chromium dev tools. The dev tools include panels such as:
+- DOM Inspector
+- JavaScript Console
+
+
+The screenshot below illustrates the dev tools being displayed by right-mouse clicking over an web page element and selecting `Inspect` to open a pop-up Chromiumn dev-tools window:
+
+```{image} /08_use_cases/images/webview_console.png
+```
