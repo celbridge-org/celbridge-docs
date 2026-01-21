@@ -57,10 +57,10 @@ It also offers a range of commands for running CLI programs, available using the
    > 12/03/2025  08:08 AM               README.md
    > ```
 
-2. Running `make` commands. For eaxmpe, if you're building code solution or websites using the MAKE tool. In this example I'm runnig the **make html** command to generate HTML files from RST files in a [Sphinx](https://www.formosa1544.com/2019/09/19/use-sphinx-for-python-documentation/) project (only the first few lines of output are shown ...):
+2. Running `make` commands. For example, if you're building code solution or websites using the **MAKE** tool. In this example I'm running the `make html` command to generate HTML files from RST files in a [Sphinx](https://www.formosa1544.com/2019/09/19/use-sphinx-for-python-documentation/) project (only the first few lines of output are shown ...):
 
    > ```
-   > >>> !make
+   > >>> !make html
    > Running Sphinx v8.2.3
    > loading translations [en]... done
    > loading pickled environment... done
@@ -112,5 +112,6 @@ Learn more about REPLs and this console at:
 - [REPL (Read-Evaluate-Print-Loop)](https://en.wikipedia.org/wiki/Replit)
 - [CLI (Command Line Interface (terminal))](https://en.wikipedia.org/wiki/Command-line_interface)
 - [MAKE](<https://en.wikipedia.org/wiki/Make_(software)>)
+
 
 
