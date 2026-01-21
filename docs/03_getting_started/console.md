@@ -40,7 +40,7 @@ This terminal offers a full Python [REPL](https://en.wikipedia.org/wiki/Read%E2%
 
 ## CLI commands
 
-### CLI bang `%` commands
+### CLI bang `!` commands
 
 It also offers a range of commands for running CLI programs, available using the bang "`!`" ([exclamation mark](https://en.wikipedia.org/wiki/Exclamation_mark)) character. Examples including:
 
@@ -81,7 +81,7 @@ IPython offers a range of commands for running CLI programs, available using the
 
    > ```
    > >>> %pwd
-   > 'C:\\Mac\\Home\\Documents\\github\\celbridge-docs'
+   > 'C:\Documents\github\celbridge-docs'
    >
    > >>> 
    > ```
@@ -91,13 +91,13 @@ IPython offers a range of commands for running CLI programs, available using the
 
    > ```
    > >>> %pwd
-   > 'C:\\Mac\\Home\\Documents\\github\\celbridge-docs'
+   > 'C:\Documents\github\celbridge-docs'
    >
    > >>> %cd ..
-   > C:\Mac\Home\Documents\github
+   > C:\Documents\github
    >
    > >>> %pwd
-   > 'C:\\Mac\\Home\\Documents\\github'
+   > 'C:\Documents\github'
    >
    > >>>
    > ```
@@ -112,4 +112,5 @@ Learn more about REPLs and this console at:
 - [REPL (Read-Evaluate-Print-Loop)](https://en.wikipedia.org/wiki/Replit)
 - [CLI (Command Line Interface (terminal))](https://en.wikipedia.org/wiki/Command-line_interface)
 - [MAKE](<https://en.wikipedia.org/wiki/Make_(software)>)
+
 
