@@ -65,6 +65,7 @@ Here's a screenshot of Celbridge in action:
 
    03_getting_started/index
    03_getting_started/examples
+   03_getting_started/useful_features
    03_getting_started/console
 
 

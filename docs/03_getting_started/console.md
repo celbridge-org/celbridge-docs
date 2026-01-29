@@ -75,9 +75,11 @@ It also offers a range of commands for running CLI programs, available using the
 
 ### IPython built-in "magic" `%` commands
 
-IPython offers a range of commands for running CLI programs, available using the percent "`%`" character. Examples including:
+IPython offers a range of commands for running CLI programs, available using the percent "`%`" character. Automagic mode is switched on by default, so in almost all cases you can omit the percent "`%`" character, since IPython will saerch its list of magic commands to match against what you have typed.
 
-1. Print Working Direcotry (`pwd`):
+Examples including:
+
+1. Print Working Direcotry (`%pwd` or `pwd`):
 
    > ```
    > >>> %pwd
@@ -87,7 +89,7 @@ IPython offers a range of commands for running CLI programs, available using the
    > ```
 
 
-1. Change Direcotry (`cd`):
+1. Change Direcotry (`%cd` or `cd`):
 
    > ```
    > >>> %pwd
@@ -102,9 +104,37 @@ IPython offers a range of commands for running CLI programs, available using the
    > >>>
    > ```
 
+1. History of terminal commands (`%history` or `history`)
+
+   > ```
+   > >>> history
+   > pwd
+   > cd docs
+   > !make clean
+   > !make html
+   > !python3 -m http.server 8000 --directory _build\html
+   > history
+   > ```
 
 The IPython documentation pages provide
 a [full list of the magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
+
+### IPython `.ipy` files
+
+If there are several commands you often type in the same sequence, or have commands with many arguments, you can type those commands into a text file with the `.ipy` extension, and then run the sequence of commands in that file at the terminal with:
+
+   > ```
+   > >>> run <filename>.ipy
+   > ```
+
+For example, when working with Sphinx I often wish to run `!make clean` immediately before running `!make html`. So I could create a file `make.ipy` containing these commands:
+
+   > ```
+   > !make clean
+   > !make html
+   > ```
+
+And then I can run them by entering `run make.ipy` in the console.
 
 
 Learn more about REPLs and this console at:
