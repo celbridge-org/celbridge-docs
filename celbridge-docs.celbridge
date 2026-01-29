@@ -14,3 +14,29 @@ dependencies = [
 
 [celbridge]
 celbridge-version = "0.2.0"
+
+[[shortcut]]
+name = "fred"
+icon = "Play"
+tooltip = "Run the freds"
+
+[[shortcut]]
+name = "fred/server"
+tooltip = "Run example web server"
+script = '''
+run "06_data_cleaning/fred.py"
+'''
+
+[[shortcut]]
+name = "fred/server2"
+tooltip = "Run example web server2"
+script = '''
+run "06_data_cleaning/fred2.py"
+'''
+
+[[shortcut]]
+name = "web server"
+tooltip = "web server"
+script='''
+!!python3 -m http.server 8000 --directory \docs\_build\html
+'''
