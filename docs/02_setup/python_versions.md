@@ -4,7 +4,7 @@ The project settings file configures the project for a specific version of Pytho
 
 For example, this screenshot shows the project settings file for a project named **sample-project-01**:
 
-```{image} /02_setup/images/project_settings_explorer_panel.png
+```{image} /02_setup/images/project_settings_explorer_panel2.png
 :alt: Screenshot showing .celbridge configuration file in the file explorer panel
 :width: 50%
 ```
@@ -14,6 +14,9 @@ For example, this screenshot shows the project settings file for a project named
 The `project` section of the project settings file uses key `requires-python` to declare the Python version for the project. For example, this declares Python version **3.12** for a project:
 
 ```
+[celbridge]
+celbridge-version = "0.2.0"
+
 [project]
 requires-python = "3.12"
 ```
@@ -21,7 +24,9 @@ requires-python = "3.12"
 If your project requires a specific version of Python, then it's this project setting you need to ensure specifies that version.
 
 :::{note}
-Every project **must** have a `[project]` section, with a `requires-python` key that declares the required Python language version.
+Every project **must** have a `[project]` section, with a `requires-python` key that declares the required Python language version. 
+
+It must also have a `[celbridge]` section, with a `celbridge-version` key that declares the version of Celbridge the project was created with.
 
 When you create a new Celbridge project an up-to-date version of Python will automatically be declared in the project settings file created with the project.
 :::
@@ -39,6 +44,9 @@ For example, let's add the data analysis library [Pandas] to our Celbridge proje
      - ensure you wrap double-quotes around the package name.
 
 ```
+[celbridge]
+celbridge-version = "0.2.0"
+
 [project]
 requires-python = "3.12"
 dependencies = ["pandas"]
@@ -60,6 +68,9 @@ dependencies = ["pandas"]
 You can specify multiple packages by declaring a comma-separate list of them in the `dependencies` key. For example, here we specify both the `"pandas"` and `"numpy"` packages:
 
 ```
+[celbridge]
+celbridge-version = "0.2.0"
+
 [project]
 requires-python = "3.12"
 dependencies = ["pandas", "numpy"]

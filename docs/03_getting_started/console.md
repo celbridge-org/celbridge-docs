@@ -4,7 +4,7 @@
 
 Celbridge comes with a **Console** panel offering a CLI (Command Line Interface). The prompt in this terminal comprises 3 greater-than signs **>>>**.
 
-```{image} /03_getting_started/images/console.png
+```{image} /03_getting_started/images/console2.png
 :alt: Screenshot showing Console panel with some Python REPL commands
 :width: 75%
 ```
