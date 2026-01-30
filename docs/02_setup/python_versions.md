@@ -52,7 +52,7 @@ requires-python = "3.12"
 dependencies = ["pandas"]
 ```
 
-```{image} /02_setup/images/dependencies_pandas.png
+```{image} /02_setup/images/dependencies_pandas2.png
 :alt: Screenshot showing Python version and extensions in .celbridge configuration
 :  file
 ```

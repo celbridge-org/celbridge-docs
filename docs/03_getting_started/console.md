@@ -6,7 +6,7 @@ Celbridge comes with a **Console** panel offering a CLI (Command Line Interface)
 
 ```{image} /03_getting_started/images/console2.png
 :alt: Screenshot showing Console panel with some Python REPL commands
-:width: 75%
+:width: 50%
 ```
 
 :::{sidebar} The IPython REPL
