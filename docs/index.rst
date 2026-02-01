@@ -32,7 +32,7 @@ for your topic of interest. You can also use the search function in the top-left
 
 Here's a screenshot of Celbridge in action:
 
-.. image:: /images/celbridge_application.png
+.. image:: /images/celbridge_application2.png
    :alt: Screenshot showing Celbridge application with Python editor panel open
 
 
