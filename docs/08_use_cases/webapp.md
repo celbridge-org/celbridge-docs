@@ -22,12 +22,19 @@ This use case example shows you how to create a web application file, set its de
 6. Once you enter your URL (such as pressing Tab or Enter), you should see the Wikipedia home page rendered in the web view
 
 ```{image} /08_use_cases/images/webview.png
+:alt: Screenshot showing URL in Inspector for a web application docment
 ```
 
 % :width: 75%
 % :alt: Screenshot showing Console output of running hello.py script
 
 Congratulations - you've created and set a URL for a Web Application file using Celbridge!
+
+You can ZOOM using keys `CTRL+` and `CTRL-`. In the **Inspector** there are arrow buttons to move forward and back in your page linking history. Also a button to reload the home URL, and a refresh button for the current page being viewed.
+
+```{image} /08_use_cases/images/webview_features.png
+:alt: Annotated screenshot of web application document features
+```
 
 
 ## Chromium Console
