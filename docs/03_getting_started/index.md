@@ -76,6 +76,18 @@ Open the project you created in the `Creating a Project` step. From left to righ
 - The text editor supports all popular text formats and programming languages.
 - The documents panel also provides a live preview for Markdown.
 
+
+:::{note}
+Right-mouse clicking over a document tab will show the document's context menu:
+
+
+```{image} /03_getting_started/images/documents_panel_tabs_context_menu.png
+:alt: Screenshot showing Document tab context menu choices
+```
+:::
+
+
+
 ### Inspector Panel
 
 - The inspector panel allows you to perform document-specific actions. For example, you can run a Python script that edits the data of a spreadsheet from the spreadsheet inspector panel.

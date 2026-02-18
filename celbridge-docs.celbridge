@@ -1,5 +1,5 @@
 [celbridge]
-celbridge-version = "0.2.0"
+celbridge-version = "0.2.3"
 
 [project]
 requires-python = "3.12"
@@ -12,3 +12,15 @@ dependencies = [
     "myst-parser",
     "myst-parser[linkify]"
 ]
+
+[[shortcut]]
+name = "make"
+script = '''
+run "make.ipy"
+'''
+
+[[shortcut]]
+name = "serve"
+script = '''
+run "serve.ipy"
+'''
