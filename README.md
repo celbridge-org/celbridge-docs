@@ -27,7 +27,7 @@ These docs are to be generated using the Spinx Python static HTML site generator
     >>> !make html
     ```
 
-7. run a webserver, to serve up the contents of `/docs/_build/html`
+7. run a webserver, to serve up the contents of `/docs/_build/html` .
 
 ![screenshot of docs project open in Celbrdige with Console make commands](make_html.png)
 
