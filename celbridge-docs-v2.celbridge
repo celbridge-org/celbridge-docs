@@ -1,0 +1,11 @@
+[celbridge]
+celbridge-version = "0.3.0"
+project-version = "0.1.0"
+
+# The resource set: the files the ignore-file allows, plus 'add', minus 'remove'.
+# 'lock' freezes resources so they can't be edited, moved, or deleted.
+[celbridge.resources]
+ignore-file = ".gitignore"
+add = []
+remove = [".gitignore"]
+lock = []

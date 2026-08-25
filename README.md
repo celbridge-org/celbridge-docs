@@ -27,14 +27,16 @@ publishing a site with holes in it.
 
 ## This repo is a Celbridge project - you can build the docs in Celbridge :-)
 
-The two console shortcuts in `celbridge-docs.celbridge` do the same two things:
+Open `docs.console`. It is a Python console that installs Zensical into its own
+environment, and it carries two toolbar shortcuts:
 
-- **serve** runs `serve.ipy` - a live preview on http://localhost:8000. Open
-  `web_view.webapp` beside it to read the site inside Celbridge.
-- **build** runs `build.ipy` - a one-off strict build into `site/`.
+- **Build** runs `build.ipy` - a strict build into `site/`, then the redirect
+  stubs.
+- **Serve** runs `serve.ipy` - a live preview on http://localhost:8000. Open
+  `site_preview.webview` beside it to read the site inside Celbridge.
 
-Both use the project's own Python environment, so there is nothing to install
-by hand beyond opening the project.
+The dependency and the shortcuts are declared in `docs.console` itself, so there
+is nothing to install by hand beyond opening the project.
 
 ## Layout
 
@@ -47,6 +49,8 @@ docs/                    the documentation itself
   _static/css/           stylesheet and self-hosted fonts
 redirects.csv            old Sphinx URL -> its replacement
 scripts/                 post-build steps (Zensical has no plugin API)
+docs.console             the Celbridge console: Zensical, and the two shortcuts
+site_preview.webview     the built site, read inside Celbridge
 site/                    build output, gitignored
 .github/workflows/       build and deploy to GitHub Pages on a push to main
 ```

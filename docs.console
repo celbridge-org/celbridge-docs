@@ -1,0 +1,18 @@
+# A Python console for working on the docs. The dependency and the shortcuts
+# live here because the project config no longer carries either.
+[session]
+type = "python"
+
+[session.options]
+python_version = "3.12"
+dependencies = ["zensical==0.0.55"]
+
+[[session.shortcut]]
+label = "Build"
+icon = "bs-hammer"
+text = "run build.ipy"
+
+[[session.shortcut]]
+label = "Serve"
+icon = "bs-play-fill"
+text = "run serve.ipy"
