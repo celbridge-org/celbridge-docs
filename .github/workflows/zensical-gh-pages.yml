@@ -42,6 +42,11 @@ jobs:
       - name: Build (strict)
         run: zensical build --clean --strict
 
+      # The old Sphinx URLs, which Pages cannot serve a 301 for. The script
+      # fails the run if a redirect points at a page that no longer exists.
+      - name: Write redirect stubs
+        run: python scripts/gen_redirect_stubs.py
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -1,0 +1,23 @@
+# Old Sphinx URLs -> their Zensical equivalents.
+#
+# The Sphinx html builder wrote /page.html; Zensical writes /page/. Every page
+# URL therefore changed when the generator did, and these are the ones that
+# would otherwise 404: the index pages are absent because /section/index.html
+# is what a directory URL serves anyway, so those kept working on their own.
+#
+# This list is a historical fact, not a view of the current docs - it records
+# what the Sphinx site published. Do not regenerate it from the docs tree.
+# Renaming a page from here on is a new row, keeping the old one.
+old_url,new_url
+/01_about/faq.html,/01_about/faq/
+/02_setup/installation.html,/02_setup/installation/
+/02_setup/python_versions.html,/02_setup/python_versions/
+/02_setup/system_requirements.html,/02_setup/system_requirements/
+/03_getting_started/console.html,/03_getting_started/console/
+/03_getting_started/examples.html,/03_getting_started/examples/
+/03_getting_started/useful_features.html,/03_getting_started/useful_features/
+/08_use_cases/hello_world.html,/08_use_cases/hello_world/
+/08_use_cases/sphinx.html,/08_use_cases/sphinx/
+/08_use_cases/webapp.html,/08_use_cases/webapp/
+/genindex.html,/
+/search.html,/

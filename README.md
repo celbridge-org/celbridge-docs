@@ -45,9 +45,26 @@ docs/                    the documentation itself
   01_about/ 02_setup/ 03_getting_started/ 08_use_cases/ 09_community/
   images/                shared screenshots
   _static/css/           stylesheet and self-hosted fonts
+redirects.csv            old Sphinx URL -> its replacement
+scripts/                 post-build steps (Zensical has no plugin API)
 site/                    build output, gitignored
 .github/workflows/       build and deploy to GitHub Pages on a push to main
 ```
+
+## The old URLs
+
+Sphinx published `/page.html` and Zensical publishes `/page/`, so every page URL
+changed with the generator. GitHub Pages cannot serve a 301, so
+`scripts/gen_redirect_stubs.py` writes a small redirecting HTML file at each old
+URL after the build - a `<meta http-equiv="refresh">`, a `rel="canonical"` at the
+new URL, and a line of script that carries the `#fragment` across. The section
+index pages are not in the list: `/section/index.html` is what a directory URL
+serves anyway, so those never broke.
+
+`redirects.csv` records what the Sphinx site published. It is history, not a view
+of the current docs - do not regenerate it from the docs tree. Renaming a page
+adds a row and keeps the old one. The script fails the build if a redirect points
+at a page that no longer exists, or if one would shadow a real page.
 
 ## Editing
 
