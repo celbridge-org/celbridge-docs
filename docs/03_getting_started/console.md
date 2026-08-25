@@ -1,17 +1,13 @@
-(doc_console)=
-
-# Using the console
+# Using the console { #doc_console }
 
 Celbridge comes with a **Console** panel offering a CLI (Command Line Interface). The prompt in this terminal comprises 3 greater-than signs **>>>**.
 
-```{image} /03_getting_started/images/console2.png
-:alt: Screenshot showing Console panel with some Python REPL commands
-:width: 50%
-```
+![Screenshot showing Console panel with some Python REPL commands](images/console2.png){ width="50%" }
 
-:::{sidebar} The IPython REPL
-The console panel is rendered using [Xterm.js](https://xtermjs.org/) hosted in a WebView2. The Xterm.js terminal is connected to a terminal emulator session via [ConPTY](https://devblogs.microsoft.com/commandline/windows-command-line-introducing-the-windows-pseudo-console-conpty/) which is hosting a Python process. The REPL environment is implemented using [IPython](https://ipython.org/) (the same tech used in [Jupyter Notebooks](https://jupyter.org/)). The IPython REPL is a full replacement for the built-in Python REPL that adds a lot of useful functionality. We support all the standard IPython magic commands, such as %run, !, %ls, etc.
-:::
+!!! info inline end "The IPython REPL"
+
+    The console panel is rendered using [Xterm.js](https://xtermjs.org/) hosted in a WebView2. The Xterm.js terminal is connected to a terminal emulator session via [ConPTY](https://devblogs.microsoft.com/commandline/windows-command-line-introducing-the-windows-pseudo-console-conpty/) which is hosting a Python process. The REPL environment is implemented using [IPython](https://ipython.org/) (the same tech used in [Jupyter Notebooks](https://jupyter.org/)). The IPython REPL is a full replacement for the built-in Python REPL that adds a lot of useful functionality. We support all the standard IPython magic commands, such as %run, !, %ls, etc.
+
 
 The terminal is where you'll see messages from Celbridge, such as the status of loading new extensions or a different version of Python if you change the project settings and re-load the project.
 
@@ -69,9 +65,10 @@ It also offers a range of commands for running CLI programs, available using the
    > ... and so on ...
    > ```
 
-:::{note}
-**TIP** Use \<CTRL>+L to clear the console
-:::
+!!! note
+
+    **TIP** Use \<CTRL>+L to clear the console
+
 
 ### IPython built-in "magic" `%` commands
 
@@ -142,6 +139,3 @@ Learn more about REPLs and this console at:
 - [REPL (Read-Evaluate-Print-Loop)](https://en.wikipedia.org/wiki/Replit)
 - [CLI (Command Line Interface (terminal))](https://en.wikipedia.org/wiki/Command-line_interface)
 - [MAKE](<https://en.wikipedia.org/wiki/Make_(software)>)
-
-
-

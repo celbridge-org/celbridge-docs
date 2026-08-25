@@ -140,20 +140,19 @@ where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
 8. Run the Sphinx website builder, by typing `!make html` in the **Console**:
 9. Once you server the HTML files one the home page should see a link **Hello world**, linking to your simple Hello World generated HTML page:
 
-```{image} /images/hello_page.png
-:alt: Screenshot showing Hello World page now part of website and nav list
-```
+![Screenshot showing Hello World page now part of website and nav list](../images/hello_page.png)
 
-:::{note}
-If links, not just page content, have changed, you should do a clean before the build, to clear out older files.
+!!! note
 
-To clean then build run these 2 commands in the **Console**:
+    If links, not just page content, have changed, you should do a clean before the build, to clear out older files.
 
-> ```
-> >>> !make clean
-> >>> !make html
-> ```
-:::
+    To clean then build run these 2 commands in the **Console**:
+
+    > ```
+    > >>> !make clean
+    > >>> !make html
+    > ```
+
 
 Acknowledgements
 
@@ -161,4 +160,3 @@ This [sphinx_guide] was useful in creating this documentation page.
 
 [rst_guide]: https://restructuredtext-guide.readthedocs.io/en/latest/ch_syntax.html
 [sphinx_guide]: https://www.formosa1544.com/2019/09/19/use-sphinx-for-python-documentation/
-

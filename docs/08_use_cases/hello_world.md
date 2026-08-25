@@ -8,10 +8,7 @@ This use case example shows you how to create and run a simple Python script.
 - choose menu: **Add | Python Script (.py)**
 - enter the file name as **hello.py**
 
-```{image} /08_use_cases/images/new_python_script.png
-:alt: Screenshot showing context menu to create a new Python script file
-:width: 75%
-```
+![Screenshot showing context menu to create a new Python script file](images/new_python_script.png){ width="75%" }
 
 3. The new Python script file should be created and appear in the file explorer panel.
 4. Edit your new script, by double clicking on file **hello.py** in the file explorer panel:
@@ -32,9 +29,6 @@ This use case example shows you how to create and run a simple Python script.
 
 7. In the **Console** panel you should see the CLI comment **%run hello.py** followed by the text "hello world" printed out on the next line.
 
-```{image} /08_use_cases/images/run_hello_world.png
-:alt: Screenshot showing Console output of running hello.py script
-:width: 75%
-```
+![Screenshot showing Console output of running hello.py script](images/run_hello_world.png){ width="75%" }
 
 Congratulations - you've created and executed a Python script using Celbridge!

@@ -1,6 +1,0 @@
-sphinx_rtd_theme
-sphinx_new_tab_link
-sphinx-copybutton
-myst-parser
-myst-parser[linkify]
-pygments==2.19.2

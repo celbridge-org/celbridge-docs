@@ -1,6 +1,4 @@
-(doc_useful_features)=
-
-# Useful Features
+# Useful Features { #doc_useful_features }
 
 The following are some useful features of Celbridge.
 
@@ -8,10 +6,7 @@ The following are some useful features of Celbridge.
 
 The context menu for document tabs (right-mouse-click) offers useful options, including copying the file path into the system clipboard, or opening the **File Explorer** at the files location on disk.
 
-```{image} /03_getting_started/images/copy_file_path.png
-:alt: Screenshot showing document content menu with File Path option selected
-:width: 75%
-```
+![Screenshot showing document content menu with File Path option selected](images/copy_file_path.png){ width="75%" }
 
 ##  Shortcuts to run scripts from a button click
 
@@ -20,10 +15,7 @@ You can add shortcut definitions in the project's `.celbridge` file. These short
 
 Edit your project's `.celbridge` file, adding a `[[shortcut]]` entry for each button you wish to define. This screenshot shows the declaration for a shortcut will run the script `Hello.py` when clicked:
 
-```{image} /03_getting_started/images/shortcuts2.png
-:alt: Screenshot showing shortcut button in .celbridge file
-:width: 75%
-```
+![Screenshot showing shortcut button in .celbridge file](images/shortcuts2.png){ width="75%" }
 
 
 
@@ -44,16 +36,14 @@ Edit your project's `.celbridge` file, adding a `[[shortcut]]` entry for each bu
     '''
     ```
 
-:::{note}
-Note: Since you are editing the project's **".celbridge"** configuration file, you'll be prompted to reload the project after creating or editing any shortcuts...
-:::
+!!! note
+
+    Note: Since you are editing the project's **".celbridge"** configuration file, you'll be prompted to reload the project after creating or editing any shortcuts...
+
 
 When the button is clickled, the associated Python script is executed in the IPython console:
 
-```{image} /03_getting_started/images/shortcut_run.png
-:alt: Screenshot showing shortcut button running a Python script
-:width: 75%
-```
+![Screenshot showing shortcut button running a Python script](images/shortcut_run.png){ width="75%" }
 
 
 ###  Shortcut sub-menus
@@ -86,10 +76,7 @@ run "lesson01/Calculator.py"
 
 If the first (no-script) shortcut doesn't delcare a tooltip, then this name will be the tooltip for the button. When the button is clicked, the menu of shortcuts is displayed, each of which can be individally clicked to run their associated script:
 
-```{image} /03_getting_started/images/shortcut_menus.png
-:alt: Screenshot showing shortcut button tooltip for Lesson 1 scripts menu 
-:width: 75%
-```
+![Screenshot showing shortcut button tooltip for Lesson 1 scripts menu](images/shortcut_menus.png){ width="75%" }
 
 
 
@@ -106,11 +93,8 @@ run Hello.py
 '''
 ```
 
-```{image} /03_getting_started/images/shortcut_tooltip.png
-:alt: Screenshot showing shortcut button tooltip
-:width: 75%
-```
+![Screenshot showing shortcut button tooltip](images/shortcut_tooltip.png){ width="75%" }
 
-:::{note}
-Note: Since the `name` line defaults to be the tooltip, in most cases this isn't useful. However, when creating menus of shortcuts, it can use userful to allow you to have a short and simple shared name (e.g. `lesson1`) but a more complex tooltip description (e.g. `Lesson 1 scripts (beginner)`) for the button.
-:::
+!!! note
+
+    Note: Since the `name` line defaults to be the tooltip, in most cases this isn't useful. However, when creating menus of shortcuts, it can use userful to allow you to have a short and simple shared name (e.g. `lesson1`) but a more complex tooltip description (e.g. `Lesson 1 scripts (beginner)`) for the button.

@@ -1,15 +1,8 @@
 ---
-allow_comments: 'False'
+keywords: FAQ
 ---
 
-```{eval-rst}
-.. meta::
-    :keywords: FAQ
-```
-
-(doc-faq)=
-
-# Frequently asked questions
+# Frequently asked questions { #doc-faq }
 
 ## What can I do with Celbridge? How much does it cost? What are the license terms?
 
@@ -44,9 +37,10 @@ Your Celbridge projects can contain any file tyles.
 
 However, Celbridge offers additional functionality for the following file types:
 
-:::{sidebar} Additional editor features planned
-We are planning to integrate Monaco more tightly into Celbridge, particularly using [Language Server Protocol](https://coderivers.org/blog/python-language-server/) to support code completion, syntax checking and type hinting, and also to expose the most common text editor features via a toolbar or other UI.
-:::
+!!! info inline end "Additional editor features planned"
+
+    We are planning to integrate Monaco more tightly into Celbridge, particularly using [Language Server Protocol](https://coderivers.org/blog/python-language-server/) to support code completion, syntax checking and type hinting, and also to expose the most common text editor features via a toolbar or other UI.
+
 
 - **.py**
   : The Celbridge editor supports Python code editing.

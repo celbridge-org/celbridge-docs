@@ -1,12 +1,11 @@
-(doc_getting_started)=
-
-# Getting started with Celbridge
+# Getting started with Celbridge { #doc_getting_started }
 
 Welcome to Celbridge. This part of the docs will help you get to know your way around the application.
 
-:::{note}
-This document assumes you've already successfully installed Celbridge. For detailed installation instructions, see the {ref}`doc_installation` page.
-:::
+!!! note
+
+    This document assumes you've already successfully installed Celbridge. For detailed installation instructions, see the [Installation](../02_setup/installation.md#doc_installation) page.
+
 
 ## The Basics
 
@@ -14,8 +13,7 @@ Celbridge has two main interfaces: the **home menu**, where you create and open 
 
 If you have no existing project, the home menu will open automatically when Celbridge is launched. You can switch between the home menu and Celbridge editor using the buttons in the navigation bar to the left of the main interface.
 
-```{image} /images/home_explorer_buttons_switch.gif
-```
+![](../images/home_explorer_buttons_switch.gif)
 
 % :width: 50%
 % :alt: Screenshot showing Celbridge switching from home menu and Celbridge editor
@@ -30,9 +28,10 @@ Let's create a project from the home menu.
 2. Click `New project`.
 3. Name your project.
 
-:::{note}
-Currently, project names cannot contain spaces.
-:::
+!!! note
+
+    Currently, project names cannot contain spaces.
+
 
 4. Choose a folder to place your project in, and select whether you want Celbridge to create a subfolder with the same name as the project.
 
@@ -42,9 +41,7 @@ The steps to create a project from the hamburger menu are identical: just click 
 
 Let's explore the Celbridge editor.
 
-```{image} /03_getting_started/images/ui_areas.jpg
-:alt: Annotated screenshot showing Celbridge UI areas
-```
+![Annotated screenshot showing Celbridge UI areas](images/ui_areas.jpg)
 
 % :width: 50%
 
@@ -77,14 +74,13 @@ Open the project you created in the `Creating a Project` step. From left to righ
 - The documents panel also provides a live preview for Markdown.
 
 
-:::{note}
-Right-mouse clicking over a document tab will show the document's context menu:
+!!! note
+
+    Right-mouse clicking over a document tab will show the document's context menu:
 
 
-```{image} /03_getting_started/images/documents_panel_tabs_context_menu.png
-:alt: Screenshot showing Document tab context menu choices
-```
-:::
+    ![Screenshot showing Document tab context menu choices](images/documents_panel_tabs_context_menu.png)
+
 
 
 
@@ -98,7 +94,4 @@ Right-mouse clicking over a document tab will show the document's context menu:
 
 - the console has its own documentation page:
 
-  > - {ref}`doc_console`.
-
-
-
+  > - [Using the console](console.md#doc_console).

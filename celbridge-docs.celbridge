@@ -4,19 +4,13 @@ celbridge-version = "0.2.3"
 [project]
 requires-python = "3.12"
 dependencies = [
-    "sphinx",
-    "sphinx_rtd_theme",
-    "sphinx_new_tab_link",
-    "pygments==2.19.2",
-    "sphinx-copybutton",
-    "myst-parser",
-    "myst-parser[linkify]"
+    "zensical==0.0.55"
 ]
 
 [[shortcut]]
-name = "make"
+name = "build"
 script = '''
-run "make.ipy"
+run "build.ipy"
 '''
 
 [[shortcut]]

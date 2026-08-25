@@ -4,10 +4,7 @@ The project settings file configures the project for a specific version of Pytho
 
 For example, this screenshot shows the project settings file for a project named **sample-project-01**:
 
-```{image} /02_setup/images/project_settings_explorer_panel2.png
-:alt: Screenshot showing .celbridge configuration file in the file explorer panel
-:width: 50%
-```
+![Screenshot showing .celbridge configuration file in the file explorer panel](images/project_settings_explorer_panel2.png){ width="50%" }
 
 ## Python version
 
@@ -23,13 +20,14 @@ requires-python = "3.12"
 
 If your project requires a specific version of Python, then it's this project setting you need to ensure specifies that version.
 
-:::{note}
-Every project **must** have a `[project]` section, with a `requires-python` key that declares the required Python language version. 
+!!! note
 
-It must also have a `[celbridge]` section, with a `celbridge-version` key that declares the version of Celbridge the project was created with.
+    Every project **must** have a `[project]` section, with a `requires-python` key that declares the required Python language version. 
 
-When you create a new Celbridge project an up-to-date version of Python will automatically be declared in the project settings file created with the project.
-:::
+    It must also have a `[celbridge]` section, with a `celbridge-version` key that declares the version of Celbridge the project was created with.
+
+    When you create a new Celbridge project an up-to-date version of Python will automatically be declared in the project settings file created with the project.
+
 
 ## Python Packages
 
@@ -52,16 +50,11 @@ requires-python = "3.12"
 dependencies = ["pandas"]
 ```
 
-```{image} /02_setup/images/dependencies_pandas2.png
-:alt: Screenshot showing Python version and extensions in .celbridge configuration
-:  file
-```
+![Screenshot showing Python version and extensions in .celbridge configuration](images/dependencies_pandas2.png)
 
 3. After a second or two Celbridge will detect you have changed the project settings file, and in the **Console** you'll be offered a button to `Reload project`
 
-```{image} /02_setup/images/reload_project.png
-:alt: Screenshot showing button in Console panel allowing user to to Reload Project
-```
+![Screenshot showing button in Console panel allowing user to to Reload Project](images/reload_project.png)
 
 4. The console window will show Pandas being installed, after the Python virtual environemnt has been set up (give it a few seconds!).
 

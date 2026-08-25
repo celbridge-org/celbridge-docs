@@ -1,10 +1,4 @@
----
-allow_comments: 'False'
----
-
-(doc-about-intro)=
-
-# Introduction
+# Introduction { #doc-about-intro }
 
 Welcome to the offical documentation pages for of [Celbridge](https://www.celbridge.org/), the free and open source community-driven Python and data pipline workbench application.
 
@@ -40,7 +34,7 @@ This documentation is organized into several sections:
 - **Setting Up**
   : provides details about installing Celbridge on your computer.
 - **Getting Started**
-  : This {ref}`doc_getting_started` section is the best place to start, to get to know Celbridge.
+  : This [Getting started with Celbridge](../03_getting_started/index.md#doc_getting_started) section is the best place to start, to get to know Celbridge.
 - **Examples of use**
   : here several step-by-step tutorials are provided, illustrating several common Celbridge use-cases.
 - **Community**
