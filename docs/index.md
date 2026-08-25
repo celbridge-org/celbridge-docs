@@ -1,13 +1,5 @@
 # Celbridge Docs
 
-!!! attention "Work in progress — Celbridge is still in **early development**"
-
-    Any update may introduce incompatibilities with previous versions or breaking
-    architectural changes, so always back up any data before upgrading.
-
-    Check the status of the Celbridge project at the project's
-    [GitHub site](https://github.com/celbridge-org/celbridge/).
-
 Welcome to the official documentation pages for
 [Celbridge](https://www.celbridge.org/), the free and open source community-driven
 Python and data pipeline workbench application.

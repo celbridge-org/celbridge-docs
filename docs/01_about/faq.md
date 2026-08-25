@@ -28,8 +28,9 @@ in the Celbridge repository.
 ## Which platforms are supported by Celbridge?
 
 - Windows
+- MacOS
 
-(MacOS and Linux versions coming soon we hope...)
+(Linux version coming soon we hope...)
 
 ## Which standard file formats are supported by Celbridge?
 
@@ -52,14 +53,14 @@ However, Celbridge offers additional functionality for the following file types:
   : - yes, the Celbridge editor can handle plain text files :-)
 - **.md**
   : - Celbridge offers a second, rendering panel, so you can see how your Markdown looks when parsed and rendered
-    - **.rst** [ReStructured Text](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) rending coming soon!
+    - **.rst** [ReStructured Text](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) (not yet -  coming soon - tell us if this is important to you and it will move up our 'todo' list :-)
 - **.xlsx**
   : - Celbridge opens a [SpreadJS](https://developer.mescius.com/spreadjs) (thanks Mescius!) WYSIWYG editor, allowing you a natural visual editing experience when working with spreadsheet files
     - formulas, charts, pivot tables etc. are all supported
     - addionally, you can specify a Python script to be executed each time a cell has been updated
 - **.celbridge**
   : - these files are the project configuration files - they're text files that you can edit, for example to change the Python version or add packages the project requires
-- **.webapp**
+- **.webview**
   : - Celbridge includes a web viewer, so you can create a `.webapp` file, and then enter the URL of the web page to be rendered in the web viewer panel - this is a fully interactive web view just like in a browser
 
 ## What were the motivations behind creating Celbridge?

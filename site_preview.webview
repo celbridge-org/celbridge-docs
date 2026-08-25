@@ -1,2 +1,2 @@
-source_url = "http://localhost:8000"
+source_url = "http://localhost:8000/"
 show_url_bar = true
