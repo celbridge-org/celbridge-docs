@@ -87,5 +87,3 @@ at a page that no longer exists, or if one would shadow a real page.
   the absolute form breaks as soon as the docs are served under a subpath.
 - **Colour, type, spacing** - `docs/_static/css/celbridge.css`.
 
-
-

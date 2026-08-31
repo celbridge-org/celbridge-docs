@@ -37,8 +37,6 @@ This documentation is organized into several sections:
   : This [Getting started with Celbridge](../03_getting_started/index.md#doc_getting_started) section is the best place to start, to get to know Celbridge.
 - **Examples of use**
   : here several step-by-step tutorials are provided, illustrating several common Celbridge use-cases.
-- **Community**
-  : details of how to connect with the Celbridge community.
 
 All documentation content is licensed under the permissive Creative Commons Attribution 4.0 International
 ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)) license,

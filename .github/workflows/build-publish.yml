@@ -59,6 +59,10 @@ jobs:
           # stylesheet with it.
           touch deploy-tree/.nojekyll
           cp publish/wrangler.jsonc deploy-tree/wrangler.jsonc
+          # The Worker serves the branch root, so the clone's .git folder is
+          # inside its assets directory. Workers uploads what it is not told
+          # to skip.
+          cp publish/.assetsignore deploy-tree/.assetsignore
 
       # A fresh single-commit history each time, so the branch does not
       # accumulate a copy of the site per build.
