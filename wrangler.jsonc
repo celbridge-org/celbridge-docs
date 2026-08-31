@@ -1,0 +1,19 @@
+// Copied to the root of the deploy branch by .github/workflows/build-publish.yml.
+// It lives here rather than there because the deploy branch is generated: every
+// build force-pushes over it, so nothing on that branch can be edited by hand.
+//
+// "name" must match the Worker created in the Cloudflare dashboard, and must
+// differ from the website's Worker. A different name silently creates a second
+// Worker rather than updating the first.
+//
+// The directory is the branch root rather than a subfolder, because GitHub Pages
+// can only serve a branch's root or its /docs folder and the same branch feeds
+// both hosts. This file is therefore uploaded as an asset alongside the site.
+{
+  "name": "celbridge-docs",
+  "compatibility_date": "2026-08-31",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}

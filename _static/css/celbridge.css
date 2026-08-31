@@ -1,0 +1,202 @@
+/* Celbridge brand layer for the Zensical/Material theme.
+ *
+ * TDD v01 §9.1: every colour in the site derives from this file. The palette is
+ * taken from the logo (docs/images/icon2.svg) — the green ramp #31c923 → #006523,
+ * the cream #efe0d8, and the slate #272832 / #494c60.
+ *
+ * Fonts are self-hosted (§16). `theme.font = false` in zensical.toml disables the
+ * Google Fonts link the theme would otherwise emit.
+ */
+
+/* ---------------------------------------------------------------- fonts -- */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/InterVariable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/JetBrainsMono-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/JetBrainsMono-Bold.woff2") format("woff2");
+}
+
+:root {
+  --md-text-font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --md-code-font: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
+/* --------------------------------------------------------------- brand -- */
+
+:root {
+  /* Green ramp, sampled from the logo mark's gradient. */
+  --cb-green-100: #d8f5d3;
+  --cb-green-300: #6fe063;
+  --cb-green-400: #31c923;
+  --cb-green-500: #29c023;
+  --cb-green-600: #0b9f23;
+  --cb-green-700: #007923;
+  --cb-green-800: #006523;
+
+  /* Slate ramp, from the logo's dark plate. */
+  --cb-slate-900: #14161c;
+  --cb-slate-800: #1b1e26;
+  --cb-slate-700: #232631;
+  --cb-slate-600: #272832;
+  --cb-slate-500: #33364a;
+  --cb-slate-400: #494c60;
+
+  --cb-cream: #efe0d8;
+  --cb-cream-dim: #bdb5ac;
+
+  --cb-radius: 10px;
+  --cb-maxw: 1200px;
+}
+
+/* -------------------------------------------------------- light scheme -- */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--cb-slate-600);
+  --md-primary-fg-color--light: var(--cb-slate-400);
+  --md-primary-fg-color--dark: var(--cb-slate-900);
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgb(255 255 255 / 70%);
+
+  /* #007923 on white is 5.6:1 — the logo green itself is only 1.9:1 and fails
+     as link text, so the ramp is stepped down here (§9.1 step 3). */
+  --md-accent-fg-color: var(--cb-green-700);
+  --md-accent-fg-color--transparent: rgb(0 121 35 / 10%);
+  --md-typeset-a-color: var(--cb-green-800);
+
+  --md-footer-bg-color: var(--cb-slate-900);
+  --md-footer-bg-color--dark: #0d0f14;
+}
+
+/* --------------------------------------------------------- dark scheme -- */
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 232;
+
+  --md-default-bg-color: var(--cb-slate-900);
+  --md-default-bg-color--light: var(--cb-slate-800);
+  --md-default-fg-color: var(--cb-cream);
+  --md-default-fg-color--light: var(--cb-cream-dim);
+  --md-default-fg-color--lighter: rgb(189 181 172 / 55%);
+  --md-default-fg-color--lightest: rgb(189 181 172 / 18%);
+
+  --md-primary-fg-color: var(--cb-slate-800);
+  --md-primary-fg-color--light: var(--cb-slate-600);
+  --md-primary-fg-color--dark: var(--cb-slate-900);
+  --md-primary-bg-color: var(--cb-cream);
+  --md-primary-bg-color--light: var(--cb-cream-dim);
+
+  /* #31c923 on #14161c is 8.3:1. */
+  --md-accent-fg-color: var(--cb-green-400);
+  --md-accent-fg-color--transparent: rgb(49 201 35 / 12%);
+  --md-typeset-a-color: var(--cb-green-300);
+
+  --md-code-bg-color: var(--cb-slate-700);
+  --md-code-fg-color: var(--cb-cream);
+
+  --md-footer-bg-color: #0b0d11;
+  --md-footer-bg-color--dark: #090a0e;
+}
+
+/* ------------------------------------------------------------ elements -- */
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* The slate palette ships `[data-md-color-scheme=slate] h1,h2,...{color:#fff}`,
+   which outranks a plain class selector and would quietly defeat the token above
+   on every heading. Matching its specificity puts the token back in charge — the
+   §9.1 property that a rebrand is a one-file edit only holds if nothing else gets
+   to set a colour. */
+[data-md-color-scheme="slate"] h1,
+[data-md-color-scheme="slate"] h2,
+[data-md-color-scheme="slate"] h3,
+[data-md-color-scheme="slate"] h4,
+[data-md-color-scheme="slate"] h5,
+[data-md-color-scheme="slate"] h6 {
+  color: var(--md-default-fg-color);
+}
+
+.md-header {
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+}
+
+/* Both selectors are needed. The theme only styles `.md-button--primary` inside
+   `.md-typeset`, so a button in a hero — which is outside the article — renders
+   with no background at all unless the unscoped rule exists. */
+.md-button--primary,
+.md-typeset .md-button--primary {
+  background-color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: var(--cb-slate-900);
+  font-weight: 600;
+}
+
+.md-button--primary:hover,
+.md-typeset .md-button--primary:hover {
+  background-color: var(--cb-green-300);
+  border-color: var(--cb-green-300);
+  color: var(--cb-slate-900);
+}
+
+.md-button {
+  border: 1px solid currentcolor;
+  border-radius: var(--cb-radius);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.625em 1.25em;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.md-button:not(.md-button--primary):hover {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}
+
+/* Screenshots in the docs are UI captures; a border keeps them from bleeding
+   into the page background in either scheme. */
+.md-typeset img {
+  border-radius: 6px;
+}
+
+/* Visible focus ring — the theme default is easy to lose on the dark plate. */
+:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
