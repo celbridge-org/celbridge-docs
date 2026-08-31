@@ -16,6 +16,8 @@ The site is built with [Zensical](https://zensical.org) and the Material theme.
 It replaced the previous Sphinx build; the content is the same Markdown, and
 `zensical.toml` now does the job `docs/conf.py` used to.
 
+
+
 ## Build it locally
 
 ```bash
