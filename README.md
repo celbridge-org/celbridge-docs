@@ -86,3 +86,6 @@ at a page that no longer exists, or if one would shadow a real page.
   (`/images/x.png`). Zensical resolves a leading `/` against the site root, so
   the absolute form breaks as soon as the docs are served under a subpath.
 - **Colour, type, spacing** - `docs/_static/css/celbridge.css`.
+
+
+
