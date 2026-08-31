@@ -22,7 +22,10 @@ Celbridge is distributed as a `.msix` installer for Windows.
 4. Launch Celbridge from the **Applications** folder, if it doesn't launch automatically.
 
 ## Current and past releases
-You can find the current and past releases at the Celbridge project source code site:  [![Github Octocat logo](../images/github-mark.svg){ width="5%" }](https://github.com/celbridge-org/celbridge/)
+You can find the current and past releases at the Celbridge project source code site: 
+
+- 
+-  [![Github Octocat logo](../images/github-mark.svg){ width="5%" }](https://github.com/celbridge-org/celbridge/)
 
 
 [celbridge.org]: https://www.celbridge.org/

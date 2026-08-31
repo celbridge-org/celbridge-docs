@@ -1,5 +1,3 @@
-# A Python console for working on the docs. The dependency and the shortcuts
-# live here because the project config no longer carries either.
 [session]
 type = "python"
 

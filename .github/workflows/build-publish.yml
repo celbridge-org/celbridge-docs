@@ -1,0 +1,76 @@
+# Builds the site on every push to main and force-pushes the output to the
+# deploy branch, which is what GitHub Pages serves and what Cloudflare watches.
+#
+# Replaces .github/workflows/zensical-gh-pages.yml, which used the Actions-native
+# Pages path (upload-pages-artifact -> deploy-pages). Two workflows both
+# publishing the site would race, so that one is deleted in the same commit.
+#
+# The loop hazard is structural rather than guarded: this workflow triggers on
+# main and writes only to deploy, so it cannot trigger itself. The deploy branch
+# carries no source, so neither Pages nor Cloudflare runs a build of its own.
+name: Build and publish to the deploy branch
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# One publish at a time; a superseded build has nothing worth finishing.
+concurrency:
+  group: publish
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # Pinned exactly. A site that builds today must build identically in six
+      # months (TDD 4). Bump this deliberately, in its own commit.
+      - run: pip install zensical==0.0.55
+
+      # --strict fails the build on a broken internal link, rather than
+      # publishing a site with holes in it.
+      - name: Build (strict)
+        run: zensical build --clean --strict
+
+      # The old Sphinx URLs, which neither host can serve a 301 for. The script
+      # fails the run if a redirect points at a page that no longer exists.
+      - name: Write redirect stubs
+        run: python scripts/gen_redirect_stubs.py
+
+      # The site sits at the root of the deploy branch because Pages can only
+      # serve a branch's root or its /docs folder.
+      - name: Assemble the deploy tree
+        run: |
+          rm -rf deploy-tree
+          mkdir -p deploy-tree
+          cp -R site/. deploy-tree/
+          # Pages runs Jekyll over branch content, and Jekyll drops every path
+          # beginning with an underscore - which would take _static/ and the
+          # stylesheet with it.
+          touch deploy-tree/.nojekyll
+          cp publish/wrangler.jsonc deploy-tree/wrangler.jsonc
+
+      # A fresh single-commit history each time, so the branch does not
+      # accumulate a copy of the site per build.
+      - name: Publish to the deploy branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd deploy-tree
+          git init -q -b deploy
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Build from ${GITHUB_SHA}"
+          git push -q --force \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" deploy

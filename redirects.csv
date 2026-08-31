@@ -7,7 +7,9 @@
 #
 # This list is a historical fact, not a view of the current docs - it records
 # what the Sphinx site published. Do not regenerate it from the docs tree.
-# Renaming a page from here on is a new row, keeping the old one.
+# Renaming a page from here on is a new row, keeping the old one. Deleting a
+# page is the one case that drops a row: /08_use_cases/sphinx.html was here
+# until the Sphinx tutorial was removed, and now 404s.
 old_url,new_url
 /01_about/faq.html,/01_about/faq/
 /02_setup/installation.html,/02_setup/installation/
@@ -17,7 +19,6 @@ old_url,new_url
 /03_getting_started/examples.html,/03_getting_started/examples/
 /03_getting_started/useful_features.html,/03_getting_started/useful_features/
 /08_use_cases/hello_world.html,/08_use_cases/hello_world/
-/08_use_cases/sphinx.html,/08_use_cases/sphinx/
 /08_use_cases/webapp.html,/08_use_cases/webapp/
 /genindex.html,/
 /search.html,/

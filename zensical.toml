@@ -17,7 +17,7 @@ edit_uri = "edit/main/docs/"
 strict = true
 
 nav = [
-  { "Celbridge Docs" = "index.md" },
+  { "Home" = "index.md" },
   { About = [
     { Overview = "01_about/index.md" },
     { "Frequently asked questions" = "01_about/faq.md" },
@@ -36,10 +36,6 @@ nav = [
   { "Examples of use" = [
     { "Hello World" = "08_use_cases/hello_world.md" },
     { "Web application file" = "08_use_cases/webapp.md" },
-    { "Setting up Sphinx" = "08_use_cases/sphinx.md" },
-  ] },
-  { Community = [
-    { Community = "09_community/index.md" },
   ] },
 ]
 

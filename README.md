@@ -6,6 +6,12 @@ pipeline workbench.
 Published via GitHub Pages at:
 - https://celbridge-org.github.io/celbridge-docs/
 
+Every push to `main` builds the site and force-pushes the output to the `deploy`
+branch, which is what Pages serves. That branch is generated: it carries no
+source, and the next build overwrites whatever is on it, so nothing there can be
+edited by hand. Anything that has to sit beside the site on the branch lives in
+`publish/` and is copied in by the workflow.
+
 The site is built with [Zensical](https://zensical.org) and the Material theme.
 It replaced the previous Sphinx build; the content is the same Markdown, and
 `zensical.toml` now does the job `docs/conf.py` used to.
@@ -22,8 +28,8 @@ zensical build --clean --strict    # -> site/
 ```
 
 `--strict` fails the build on a broken internal link. Keep it on: it is what
-the GitHub Actions workflow runs, so a broken link fails the run rather than
-publishing a site with holes in it.
+the publish workflow runs, so a broken link fails the run rather than publishing a
+site with holes in it.
 
 ## This repo is a Celbridge project - you can build the docs in Celbridge :-)
 
@@ -44,21 +50,22 @@ is nothing to install by hand beyond opening the project.
 zensical.toml            site config, theme and navigation
 docs/                    the documentation itself
   index.md               landing page
-  01_about/ 02_setup/ 03_getting_started/ 08_use_cases/ 09_community/
+  01_about/ 02_setup/ 03_getting_started/ 08_use_cases/
   images/                shared screenshots
   _static/css/           stylesheet and self-hosted fonts
 redirects.csv            old Sphinx URL -> its replacement
 scripts/                 post-build steps (Zensical has no plugin API)
+publish/                 files copied to the deploy branch beside the site
 docs.console             the Celbridge console: Zensical, and the two shortcuts
 site_preview.webview     the built site, read inside Celbridge
 site/                    build output, gitignored
-.github/workflows/       build and deploy to GitHub Pages on a push to main
+.github/workflows/       build and publish to the deploy branch on a push to main
 ```
 
 ## The old URLs
 
 Sphinx published `/page.html` and Zensical publishes `/page/`, so every page URL
-changed with the generator. GitHub Pages cannot serve a 301, so
+changed with the generator. A static host cannot serve a 301, so
 `scripts/gen_redirect_stubs.py` writes a small redirecting HTML file at each old
 URL after the build - a `<meta http-equiv="refresh">`, a `rel="canonical"` at the
 new URL, and a line of script that carries the `#fragment` across. The section
