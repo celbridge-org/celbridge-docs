@@ -1,2 +1,0 @@
-!zensical build --clean --strict
-!python scripts/gen_redirect_stubs.py

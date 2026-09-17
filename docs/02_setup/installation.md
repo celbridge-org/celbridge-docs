@@ -1,13 +1,13 @@
 # Installation { #doc_installation }
 
 
-Celbridge is distributed as a `.msix` installer for Windows.
+Build applications of Celbridge are distributed as installes: `.msix` for Windows & `dmg` for macOS.
 
 !!! note
 
     Celbridge currently runs on Windows and MacOS.
 
-    Linux/WASM versions may be possible depending on demand.
+    Linux/WASM versions may be developed if there is sufficient demand...
 
 
 ## Windows
@@ -23,8 +23,9 @@ Celbridge is distributed as a `.msix` installer for Windows.
 
 ## Current and past releases
 You can find the current and past releases at the Celbridge project source code site:  
--  [![Github Octocat logo](../images/github-mark.svg){ width="5%" }](https://github.com/celbridge-org/celbridge/)
+-  Celbridge GitHub [releases page]
 
 
 [celbridge.org]: https://www.celbridge.org/
 [downloads page]: https://www.celbridge.org/download
+[releases page]: https://github.com/celbridge-org/celbridge/releases

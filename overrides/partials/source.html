@@ -1,0 +1,23 @@
+{#-
+  The header's right-hand slot: a GitHub logo linking to the repository, and
+  nothing else. The theme also renders this partial in the mobile nav drawer,
+  which is where the icon appears on narrow screens.
+
+  Not the stock partial, and it must stay that way. The stock one prints the
+  repo name beside the icon and carries `data-md-component="source"`, which
+  tells the theme's JavaScript to call https://api.github.com/repos/<repo> from
+  the visitor's browser on every page load, to show star and fork counts. That
+  is a third-party request made without the visitor asking for anything.
+-#}
+<div class="cb-header-links">
+  <a
+    href="{{ config.repo_url }}"
+    class="cb-header-links__link md-icon"
+    title="{{ config.repo_name }} on GitHub"
+    aria-label="{{ config.repo_name }} on GitHub"
+    target="_blank"
+    rel="noopener"
+  >
+    {% include ".icons/fontawesome/brands/github.svg" %}
+  </a>
+</div>

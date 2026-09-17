@@ -25,9 +25,14 @@ python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install zensical==0.0.55
 
-zensical serve                     # http://localhost:8000, live reload
-zensical build --clean --strict    # -> site/
+python build.py                    # strict build into site/, then redirect stubs
+python build.py serve              # http://localhost:8000, live reload
 ```
+
+`build.py` runs the same two steps the publish workflow runs. It finds `zensical`
+in `.venv` when that exists and on `PATH` otherwise, which is what lets the same
+script serve both this flow and the Celbridge consoles below; `PY` and `ZENSICAL`
+override the pair.
 
 `--strict` fails the build on a broken internal link. Keep it on: it is what
 the publish workflow runs, so a broken link fails the run rather than publishing a
@@ -35,16 +40,35 @@ site with holes in it.
 
 ## This repo is a Celbridge project - you can build the docs in Celbridge :-)
 
-Open `docs.console`. It is a Python console that installs Zensical into its own
-environment, and it carries two toolbar shortcuts:
+Three numbered buttons on the Utility bar open the documents that drive the local
+build and preview. Each declares its own Zensical dependency, so there is nothing
+to install by hand beyond opening the project.
 
-- **Build** runs `build.ipy` - a strict build into `site/`, then the redirect
-  stubs.
-- **Serve** runs `serve.ipy` - a live preview on http://localhost:8000. Open
-  `site_preview.webview` beside it to read the site inside Celbridge.
+1. `site-server.console` (icon "1", bottom panel)
+   - a Python console that runs `run build.py serve` as soon as it opens
+   - the server then runs in the background for the rest of the session
 
-The dependency and the shortcuts are declared in `docs.console` itself, so there
-is nothing to install by hand beyond opening the project.
+2. `site_preview.webview` (icon "2", side panel)
+   - the preview, at http://localhost:8000/celbridge-docs/ - the dev server serves
+     the site under the subpath in `site_url`, not at the root
+
+3. `site-re-builder.console` (icon "3", bottom panel)
+   - a Python console with a **Build** shortcut (hammer icon) that runs
+     `run build.py`: a strict build into `site/`, then the redirect stubs
+   - click it whenever you want to be sure the preview is showing a fresh build
+
+### Typical editing workflow
+
+1. open the project in Celbridge
+2. open (1) the site server console, in the bottom panel
+3. open (2) the site preview, in the side panel
+4. open (3) the re-builder console, in the bottom panel
+5. edit content under `docs/`
+6. click the hammer in the re-builder console to rebuild
+7. read the updated pages in the side panel preview
+8. repeat from step 5 for more edits
+9. `git add/commit/push` when done - the push to `main` publishes the site
+10. check the live site at https://learn.celbridge.org/
 
 ## Layout
 
@@ -58,8 +82,10 @@ docs/                    the documentation itself
 redirects.csv            old Sphinx URL -> its replacement
 scripts/                 post-build steps (Zensical has no plugin API)
 publish/                 files copied to the deploy branch beside the site
-docs.console             the Celbridge console: Zensical, and the two shortcuts
-site_preview.webview     the built site, read inside Celbridge
+build.py                 the local build: strict build, then the redirect stubs
+site-server.console      Celbridge: the preview server, started on open
+site-re-builder.console  Celbridge: a console with a Build shortcut
+site_preview.webview     Celbridge: the preview, read beside the editor
 site/                    build output, gitignored
 .github/workflows/       build and publish to the deploy branch on a push to main
 ```

@@ -14,16 +14,18 @@ You can find help on the the Celbridge community [Discourse forum](https://celbr
 
 A multi-purpose workbench application is a complex tool and difficult to present in a few words. However, here are some of the key features of Celbridge:
 
-- **File Explorer**
+- **Explorer panel**
   : - you work with your own files, on your own computer, privately and securely.
-- **Python**
-  : - Celbridge allows you to speficy a Python version (and extensions) and uses UV to create a virtual machine to work within for your project.
+
+- **Console documents**
+    - **Shell console document**
+    : - a command-line terminal document 
+    - **Python console document**
+    : - uses UV to create a local Python language interpreter, and provides an interactive Python console. Allows running of Python scripts through **Run** context (right-mouse button) menu, and easy declaration of packages.
 - **Spreasdsheet Data**
   : - Celbridge allows you to work with Microsoft Excel file formats, with a full visual spreadsheet front-end (curtesy of SpreadJS), so you can edit and format your spreadsheets in a natural always.
-- **Spreadsheet validation**
-  : - a Python script can be set to run each time you make a change to a spreadsheet cell, automating spreadsheet validation/transformation.
-- **Web Viewer**
-  : - you can view and interact with web pages and webapps through files ending with `.webapp`, where you specify a URL and the built-in webview of Celbridge presents the interactive webpage you specify in the file properties.
+- **Web View documents**
+  : - you can view and interact with web pages and webapps through files ending with `.webview`, where you specify a URL and the built-in webview of Celbridge presents the interactive webpage you specify in the file properties.
 
 ## Organization of the documentation
 

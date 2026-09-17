@@ -1,0 +1,45 @@
+{#-
+  The stock primary nav — the sidebar on wide screens, the burger drawer on
+  narrow ones — with `extra.nav_links` appended at the end. Those are off-site
+  destinations rather than pages of these docs, so they open in a new tab and
+  carry the ↗ marker, and a rule separates them from the documentation above
+  (both in celbridge.css).
+
+  Rendered here rather than added to `nav` in zensical.toml, because a nav
+  entry with an absolute URL would be built as a page and counted by --strict.
+-#}
+{% import "partials/nav-item.html" as item with context %}
+{% set class = "md-nav md-nav--primary" %}
+{% if "navigation.tabs" in features %}
+  {% set class = class ~ " md-nav--lifted" %}
+{% endif %}
+{% if "toc.integrate" in features %}
+  {% set class = class ~ " md-nav--integrated" %}
+{% endif %}
+<nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    {{ config.site_name }}
+  </label>
+  {% if config.repo_url %}
+    <div class="md-nav__source">
+      {% include "partials/source.html" %}
+    </div>
+  {% endif %}
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for nav_item in nav.items %}
+      {% set path = "__nav_" ~ loop.index %}
+      {{ item.render(nav_item, path, 1) }}
+    {% endfor %}
+    {% for nav_link in config.extra.nav_links | d([]) %}
+      <li class="md-nav__item{% if loop.first %} cb-nav__item--extra{% endif %}">
+        <a href="{{ nav_link.link }}" class="md-nav__link" target="_blank" rel="noopener">
+          <span class="md-ellipsis">{{ nav_link.name }}</span>
+          <span class="cb-external" aria-label="(opens in a new tab)"></span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

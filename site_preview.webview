@@ -1,2 +1,5 @@
-source_url = "http://localhost:8000/"
+# The dev server serves the site under the subpath in zensical.toml's site_url, and 302s the
+# root to it. Pointing straight at the subpath skips that redirect; change it if site_url moves.
+source_url = "http://localhost:8000/celbridge-docs/"
 show_url_bar = true
+show_bookmarks_bar = false

@@ -146,6 +146,33 @@
   border-bottom: 1px solid rgb(255 255 255 / 8%);
 }
 
+/* The GitHub logo in the header's right-hand slot
+   (overrides/partials/source.html). The theme sizes that slot for a repository
+   name; the icon needs only its own width. */
+.md-header__source {
+  max-width: none;
+  width: auto;
+}
+
+.cb-header-links {
+  align-items: center;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.cb-header-links__link {
+  border-radius: 0.2rem;
+  color: inherit;
+  opacity: 0.8;
+  padding: 0.4rem;
+  transition: opacity 120ms ease;
+}
+
+.cb-header-links__link:hover,
+.cb-header-links__link:focus-visible {
+  opacity: 1;
+}
+
 /* Both selectors are needed. The theme only styles `.md-button--primary` inside
    `.md-typeset`, so a button in a hero — which is outside the article — renders
    with no background at all unless the unscoped rule exists. */
@@ -177,6 +204,21 @@
 .md-button:not(.md-button--primary):hover {
   border-color: var(--md-accent-fg-color);
   color: var(--md-accent-fg-color);
+}
+
+/* Off-site links appended to the primary nav (overrides/partials/nav.html) get
+   a rule above them, separating them from the documentation pages. */
+.cb-nav__item--extra {
+  border-top: 0.05rem solid var(--md-default-fg-color--lightest);
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+}
+
+/* External-link indicator. Drawn in CSS so it costs no request. */
+.cb-external::after {
+  content: "\2197";
+  font-size: 0.85em;
+  margin-inline-start: 0.35em;
 }
 
 /* Screenshots in the docs are UI captures; a border keeps them from bleeding

@@ -7,16 +7,19 @@
 #
 # This list is a historical fact, not a view of the current docs - it records
 # what the Sphinx site published. Do not regenerate it from the docs tree.
-# Renaming a page from here on is a new row, keeping the old one. Deleting a
-# page is the one case that drops a row: /08_use_cases/sphinx.html was here
-# until the Sphinx tutorial was removed, and now 404s.
+# Renaming a page from here on is a new row, keeping the old one; where the
+# renamed page is the destination of a Sphinx row, that row is retargeted at the
+# new URL instead, since a second row for the same old URL would just overwrite
+# the first stub. Deleting a page is the one case that drops a row:
+# /08_use_cases/sphinx.html was here until the Sphinx tutorial was removed, and
+# now 404s.
 old_url,new_url
 /01_about/faq.html,/01_about/faq/
 /02_setup/installation.html,/02_setup/installation/
 /02_setup/python_versions.html,/02_setup/python_versions/
 /02_setup/system_requirements.html,/02_setup/system_requirements/
 /03_getting_started/console.html,/03_getting_started/console/
-/03_getting_started/examples.html,/03_getting_started/examples/
+/03_getting_started/examples.html,/03_getting_started/python_template/
 /03_getting_started/useful_features.html,/03_getting_started/useful_features/
 /08_use_cases/hello_world.html,/08_use_cases/hello_world/
 /08_use_cases/webapp.html,/08_use_cases/webapp/

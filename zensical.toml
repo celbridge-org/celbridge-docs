@@ -16,31 +16,38 @@ edit_uri = "edit/main/docs/"
 
 strict = true
 
+# Must stay above the [project.*] table headers below: written after them, TOML
+# scopes it into the last one (it was swallowed by a palette entry, so the brand
+# stylesheet silently never loaded).
+extra_css = ["_static/css/celbridge.css"]
+
 nav = [
   { "Home" = "index.md" },
   { About = [
-    { Overview = "01_about/index.md" },
+    { About = "01_about/index.md" },
     { "Frequently asked questions" = "01_about/faq.md" },
   ] },
   { "Setting up" = [
     { Installation = "02_setup/installation.md" },
     { "System requirements" = "02_setup/system_requirements.md" },
-    { "Python versions and packages" = "02_setup/python_versions.md" },
+    # { "Python versions and packages" = "02_setup/python_versions.md" },
   ] },
   { "Getting started" = [
     { "Getting started" = "03_getting_started/index.md" },
-    { "The Examples project" = "03_getting_started/examples.md" },
-    { "Useful features" = "03_getting_started/useful_features.md" },
-    { "Using the console" = "03_getting_started/console.md" },
+    { "The Python template project" = "03_getting_started/python_template.md" },
+    # { "Useful features" = "03_getting_started/useful_features.md" },
+    # { "Using the console" = "03_getting_started/console.md" },
   ] },
   { "Examples of use" = [
-    { "Hello World" = "08_use_cases/hello_world.md" },
-    { "Web application file" = "08_use_cases/webapp.md" },
+    { "Hello World (Python)" = "08_use_cases/hello_world.md" },
+    # { "Web application file" = "08_use_cases/webapp.md" },
   ] },
 ]
 
 [project.theme]
 name = "material"
+# Holds partials/source.html, which replaces the theme's repo widget with a GitHub logo.
+custom_dir = "overrides"
 language = "en"
 logo = "images/icon2.svg"
 favicon = "images/icon.svg"
@@ -68,12 +75,27 @@ font = false
 # text = "Inter"
 # code = "JetBrains Mono"
 
+# Automatic mode, and the default because it is declared first: this entry's
+# media is the sentinel the theme re-resolves against the system on every load,
+# and watches for changes while the page is open. The two concrete entries below
+# are what the toggle switches to when someone overrides it.
+#
+# Each entry's toggle icon depicts the mode you are currently in; the toggle
+# name says where a click takes you. With three states an icon cannot usefully
+# depict the target, since two of them would need the same one.
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/monitor"
+toggle.name = "Switch to dark mode"
+
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
 primary = "custom"
 accent = "custom"
-toggle.icon = "lucide/sun"
+toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
 
 [[project.theme.palette]]
@@ -81,11 +103,16 @@ media = "(prefers-color-scheme: light)"
 scheme = "default"
 primary = "custom"
 accent = "custom"
-toggle.icon = "lucide/moon"
-toggle.name = "Switch to dark mode"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to system preference"
 
-extra_css = ["_static/css/celbridge.css"]
+# Off-site links appended to the end of the primary nav — the sidebar on wide
+# screens, the burger drawer on narrow ones (overrides/partials/nav.html).
+[[project.extra.nav_links]]
+name = "Visit Celbridge.org"
+link = "https://www.celbridge.org/"
 
+# Icon links at the bottom of the footer.
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/celbridge-org/celbridge"

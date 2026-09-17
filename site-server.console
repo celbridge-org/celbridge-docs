@@ -1,0 +1,9 @@
+# The live preview server. Opening this document starts the server, which then runs in the
+# background for the rest of the session. Read the site in site_preview.webview.
+[session]
+type = "python"
+
+[session.python]
+python_version = "3.13"
+dependencies = ["zensical==0.0.55"]
+script = "run build.py serve"
