@@ -31,14 +31,12 @@ Let's create a project from the home menu.
 2. Click `New project`.
 3. Name your project.
 
-!!! note
-
-    Currently, project names cannot contain spaces.
-
-
 4. Choose a folder to place your project in, and select whether you want Celbridge to create a subfolder with the same name as the project.
 
     - creating a folder for a new project is the default option that will be selected.
+
+1. Finally, clikc the **Create** button.
+
 
 The steps to create a project from the hamburger menu are identical: 
 

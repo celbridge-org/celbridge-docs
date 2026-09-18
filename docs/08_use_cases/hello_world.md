@@ -5,7 +5,7 @@ This use case example shows you how to create and run a simple Python script.
 ## Create a new, empty Python file
 
 1. Create a new Celbridge project (or use an existing one).
-2. Right-mouse click in the file explorer and choose to add a new Python file named **hello.py**:
+2. Right-mouse click in the file explorer and choose to add a new Python file named **hello_world.py**:
 
 - choose menu: **File | New File**
 - enter the file name as **hello_world.py**
@@ -16,14 +16,14 @@ This use case example shows you how to create and run a simple Python script.
 ## Edit the Python file
 
 1. The new Python script file should be created and appear in the file explorer panel.
-1. Edit your new script, by double clicking on file **hello.py** in the file explorer panel:
+1. Edit your new script, by double clicking on file **hello_world.py** in the file explorer panel:
 
     - the file should open in the code editor in the Documents panel
 
 5. Type the following simple Python **print** statement:
 
    > ```
-   > print("hello world")
+   > print("Hello, Wworld!")
    > ```
 
    > !!! note
@@ -42,7 +42,7 @@ If you don't have a Python console document:
 
     ![Screenshot showing new console document](images/new_python_console_document.webp){ width="50%" }
 
-1. Open the Console document & ensure its **type** is Python
+1. Open the Console document & ensure its **Console Type** is Python
 
     - open the console settings
     - select **Python** from the **Console Type** dropdown menu
@@ -54,9 +54,9 @@ If you don't have a Python console document:
 
 1. Run your Python script. 
 
-    - A simple way to do this is by right-mouse clicking in the file explorer over file **hello_python.py**, and choose the **Run** option.
+    - A simple way to do this is by right-mouse clicking in the file explorer over file **hello_world.py**, and choose the **Run** option.
 
-1. In the Python console document you should see the CLI comment **%run "hello_world.py"** followed by the text "hello world" printed out on the next line.
+1. In the Python console document you should see the CLI comment **%run "hello_world.py"** followed by the text "Hello, World!" printed out on the next line.
 
 ![Screenshot showing Console output of running hello.py script](images/run_hello_world.webp){ width="75%" }
 

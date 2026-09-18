@@ -49,8 +49,10 @@ However, Celbridge offers additional functionality for the following file types:
     The text editor in Celbridge is powered by the open source [Monaco Editor](https://microsoft.github.io/monaco-editor/), which is the same text editor used in [Visual Studio Code](https://code.visualstudio.com/). Monaco is a Javascript library that we run in a locally hosted web page displayed in a WebView2. All communication between Monaco Editor and the main Celbridge application is performed via the Web Message API.
 
     Out of the box, Monaco supports basic IntelliSense, Validation and Syntax Colorization for a wide range of text formats (e.g. [JSON](https://en.wikipedia.org/wiki/JSON), Python, Markdown). It supports typical text editor features such as find and replace, cut, copy and paste and a wide range of coding-specific features, such as multi-cursors, that can be accessed via the Command Palette (accessed via the context menu or pressing F1).
+
 - **.txt**
   : - yes, the Celbridge editor can handle plain text files :-)
+
 - **.md**
   : - Celbridge offers a second, rendering panel, so you can see how your Markdown looks when parsed and rendered
     - **.rst** [ReStructured Text](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) (not yet -  coming soon - tell us if this is important to you and it will move up our 'todo' list :-)
