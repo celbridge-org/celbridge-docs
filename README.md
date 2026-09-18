@@ -3,14 +3,19 @@
 User documentation for Celbridge, the free and open source Python and data
 pipeline workbench.
 
-Published via GitHub Pages at:
-- https://celbridge-org.github.io/celbridge-docs/
+Published at:
+- https://learn.celbridge.org/ - the public site
+- https://celbridge-org.github.io/celbridge-docs/ - the same build, on Pages
 
 Every push to `main` builds the site and force-pushes the output to the `deploy`
-branch, which is what Pages serves. That branch is generated: it carries no
-source, and the next build overwrites whatever is on it, so nothing there can be
-edited by hand. Anything that has to sit beside the site on the branch lives in
-`publish/` and is copied in by the workflow.
+branch, which both hosts serve: GitHub Pages from the branch itself, and a
+Cloudflare Worker behind the custom domain (`publish/wrangler.jsonc`). One build
+feeds both, so they never differ. `site_url` in `zensical.toml` names
+learn.celbridge.org, which is what the canonical links and the sitemap point at
+on both copies. That branch is generated: it carries no source, and the next
+build overwrites whatever is on it, so nothing there can be edited by hand.
+Anything that has to sit beside the site on the branch lives in `publish/` and
+is copied in by the workflow.
 
 The site is built with [Zensical](https://zensical.org) and the Material theme.
 It replaced the previous Sphinx build; the content is the same Markdown, and

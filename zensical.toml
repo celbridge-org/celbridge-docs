@@ -5,7 +5,7 @@
 
 [project]
 site_name = "Celbridge Docs"
-site_url = "https://celbridge-org.github.io/celbridge-docs/"
+site_url = "https://learn.celbridge.org/"
 site_description = "Documentation for Celbridge — the free and open source Python and data pipeline workbench."
 site_author = "Celbridge team"
 copyright = "© 2025-present — Celbridge community (CC BY 4.0)"
