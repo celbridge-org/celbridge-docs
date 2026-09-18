@@ -1,9 +1,13 @@
-"""Write redirect stubs into the built site for the old Sphinx URLs.
+"""Write redirect stubs into the built site for URLs the docs no longer publish.
 
 Sphinx published /page.html and Zensical publishes /page/, so every page URL
 changed when the generator did. GitHub Pages cannot serve a 301, so each old
 URL gets a small HTML file that redirects to its replacement and names it as
 the canonical one. Run after `zensical build`, before the output is deployed.
+
+An old URL is either a Sphinx-era /page.html or a retired Zensical /page/; the
+second form writes its stub as that folder's index.html, which is what the
+directory URL serves.
 """
 
 import csv
@@ -69,6 +73,14 @@ def resolve_target(new_url: str) -> Path:
     return SITE_FOLDER / relative_path
 
 
+def resolve_stub(old_url: str) -> Path:
+    """The file in the built site that a redirect stub is written to."""
+    if old_url.endswith("/"):
+        return SITE_FOLDER / old_url.strip("/") / "index.html"
+
+    return SITE_FOLDER / old_url.lstrip("/")
+
+
 def relative_url(old_url: str, new_url: str) -> str:
     """The destination as an href from the stub's own location.
 
@@ -92,11 +104,13 @@ def main() -> int:
     errors = []
 
     for old_url, new_url in redirects:
-        if not old_url.endswith(".html"):
-            errors.append(f"{old_url}: an old URL must be a .html page")
+        if not old_url.endswith((".html", "/")):
+            errors.append(
+                f"{old_url}: an old URL must be a .html page or a directory URL"
+            )
             continue
 
-        stub_path = SITE_FOLDER / old_url.lstrip("/")
+        stub_path = resolve_stub(old_url)
         if stub_path.exists():
             # A stub from an earlier run is ours to replace; anything else is a
             # real page, and redirecting away from it would lose it.

@@ -8,7 +8,7 @@ site_name = "Celbridge Docs"
 site_url = "https://celbridge-org.github.io/celbridge-docs/"
 site_description = "Documentation for Celbridge — the free and open source Python and data pipeline workbench."
 site_author = "Celbridge team"
-copyright = "2025-present — Celbridge community (CC BY 4.0)"
+copyright = "© 2025-present — Celbridge community (CC BY 4.0)"
 
 repo_url = "https://github.com/celbridge-org/celbridge-docs"
 repo_name = "celbridge-org/celbridge-docs"
@@ -28,8 +28,8 @@ nav = [
     { "Frequently asked questions" = "01_about/faq.md" },
   ] },
   { "Setting up" = [
-    { Installation = "02_setup/installation.md" },
-    { "System requirements" = "02_setup/system_requirements.md" },
+    { "Installation - Windows" = "02_setup/installation.md" },
+    { "Installation - macOS" = "02_setup/installation_macos.md" },
     # { "Python versions and packages" = "02_setup/python_versions.md" },
   ] },
   { "Getting started" = [

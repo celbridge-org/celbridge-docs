@@ -4,7 +4,7 @@ Welcome to Celbridge. This part of the docs will help you get to know your way a
 
 !!! note
 
-    This document assumes you've already successfully installed Celbridge. For detailed installation instructions, see the [Installation](../02_setup/installation.md#doc_installation) page.
+    This document assumes you've already successfully installed Celbridge. For detailed installation instructions, see the [Windows](../02_setup/installation.md#doc_installation_windows) or [macOS](../02_setup/installation_macos.md#doc_installation_mac) installation page.
 
 
 ## The Basics
