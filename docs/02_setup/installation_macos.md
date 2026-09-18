@@ -6,23 +6,27 @@ Built **macOS** applications of Celbridge are distributed as `.dmg` installers.
 
     Celbridge only runs on Apple silicon (M1 or later)
 
-    *Intel Macs are not supported: the app ships as an Apple silicon build only, and Rosetta cannot run it*
+    *Intel Macs are not supported: the app ships as an Apple silicon build only, and Rosetta cannot run it.*
 
 
 ## Installation steps
 1. Download the latest `.dmg` installer from the [downloads page] page of the [celbridge.org] website.
-2. When prompted, copy the application icon into the *Applications** folder.
+2. When prompted, copy the application icon into the **Applications** folder.
 4. Launch Celbridge from the **Applications** folder, if it doesn't launch automatically.
+
+The installer is 131MB, after installation the application takes up 350MB.
 
 
 ## System minimum requirements
 
-| **CPU** | Apple silicon (M1 or later)|
+
+| Component | Minimum |
 |---|---|
-| **RAM** | 8 GB |
-| **Disk Storage** | 1Gb
-| **Application size** | the installer is 131MB, after installation the application takes up  350MB
 | **Operating system** | macOS 15 "Sequoia" or later |
+| **Processor** | Apple silicon (M1 or later)|
+| **Memory** | 8 GB of RAM |
+| **Storage** | 1 GB of free space |
+
 
 !!! note
 
