@@ -65,6 +65,8 @@ However, Celbridge offers additional functionality for the following file types:
 - **.webview**
   : - Celbridge includes a web viewer, so you can create a `.webapp` file, and then enter the URL of the web page to be rendered in the web viewer panel - this is a fully interactive web view just like in a browser
 
+![the 3 modes for working with Markdown documents](../images/markdown_modes.webp){ width=75%}
+
 ## What were the motivations behind creating Celbridge?
 
 Celbridge grew from a need for an easy-to-use workbench tool, to connect creators with data in spreadsheets with 3rd-party applications (such as the [Unreal](https://www.unrealengine.com/en-US) game engine). What started as an in-house tool for an Irish games company is now an active open-source software project, offering simplified workflows for many Python, spreadsheet and data pipeline tasks.

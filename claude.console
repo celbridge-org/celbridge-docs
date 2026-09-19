@@ -1,0 +1,5 @@
+[session]
+type = "shell"
+
+[session.shell]
+script = "claude"

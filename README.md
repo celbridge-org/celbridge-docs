@@ -32,12 +32,12 @@ pip install zensical==0.0.55
 
 python build.py                    # strict build into site/, then redirect stubs
 python build.py serve              # http://localhost:8000, live reload
+python build.py redirects          # rewrite the redirect stubs only
 ```
 
-`build.py` runs the same two steps the publish workflow runs. It finds `zensical`
-in `.venv` when that exists and on `PATH` otherwise, which is what lets the same
-script serve both this flow and the Celbridge consoles below; `PY` and `ZENSICAL`
-override the pair.
+`build.py` is the one build path: the Celbridge console below and the publish
+workflow both run this same script. It runs everything with the Python that runs
+it, so whichever environment you start it from is the one that builds.
 
 `--strict` fails the build on a broken internal link. Keep it on: it is what
 the publish workflow runs, so a broken link fails the run rather than publishing a
@@ -45,35 +45,33 @@ site with holes in it.
 
 ## This repo is a Celbridge project - you can build the docs in Celbridge :-)
 
-Three numbered buttons on the Utility bar open the documents that drive the local
-build and preview. Each declares its own Zensical dependency, so there is nothing
-to install by hand beyond opening the project.
+Two buttons on the Utility bar open the documents that drive the local build and
+preview, and both open with the project. The console declares its own Zensical
+dependency, so there is nothing to install by hand.
 
-1. `site-server.console` (icon "1", bottom panel)
-   - a Python console that runs `run build.py serve` as soon as it opens
-   - the server then runs in the background for the rest of the session
+1. `site.console` (terminal icon, bottom panel)
+   - a Python console that runs `run build.py serve --background` as soon as it
+     opens: the server starts, and the console stays free to take commands
+   - a **Build** shortcut (hammer icon) runs `run build.py`: a strict build into
+     `site/`, then the redirect stubs
+   - editing `redirects.csv` rewrites the stubs on its own
 
-2. `site_preview.webview` (icon "2", side panel)
-   - the preview, at http://localhost:8000/celbridge-docs/ - the dev server serves
-     the site under the subpath in `site_url`, not at the root
+2. `celbridge.webview` (window icon, side panel)
+   - the preview, at http://localhost:8000/
 
-3. `site-re-builder.console` (icon "3", bottom panel)
-   - a Python console with a **Build** shortcut (hammer icon) that runs
-     `run build.py`: a strict build into `site/`, then the redirect stubs
-   - click it whenever you want to be sure the preview is showing a fresh build
+`claude.console` opens a shell console running Claude Code, for working on the
+docs with an agent.
 
 ### Typical editing workflow
 
-1. open the project in Celbridge
-2. open (1) the site server console, in the bottom panel
-3. open (2) the site preview, in the side panel
-4. open (3) the re-builder console, in the bottom panel
-5. edit content under `docs/`
-6. click the hammer in the re-builder console to rebuild
-7. read the updated pages in the side panel preview
-8. repeat from step 5 for more edits
-9. `git add/commit/push` when done - the push to `main` publishes the site
-10. check the live site at https://learn.celbridge.org/
+1. open the project in Celbridge - the console and the preview open with it, and
+   the server is already running
+2. edit content under `docs/`
+3. click the hammer in the console to rebuild
+4. read the updated pages in the side panel preview
+5. repeat from step 2 for more edits
+6. `git add/commit/push` when done - the push to `main` publishes the site
+7. check the live site at https://learn.celbridge.org/
 
 ## Layout
 
@@ -87,10 +85,10 @@ docs/                    the documentation itself
 redirects.csv            old Sphinx URL -> its replacement
 scripts/                 post-build steps (Zensical has no plugin API)
 publish/                 files copied to the deploy branch beside the site
-build.py                 the local build: strict build, then the redirect stubs
-site-server.console      Celbridge: the preview server, started on open
-site-re-builder.console  Celbridge: a console with a Build shortcut
-site_preview.webview     Celbridge: the preview, read beside the editor
+build.py                 the build: strict build, then the redirect stubs
+site.console             Celbridge: the preview server and the Build shortcut
+celbridge.webview        Celbridge: the preview, read beside the editor
+claude.console           Celbridge: a shell console running Claude Code
 site/                    build output, gitignored
 .github/workflows/       build and publish to the deploy branch on a push to main
 ```

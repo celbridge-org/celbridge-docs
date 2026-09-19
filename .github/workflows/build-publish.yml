@@ -34,18 +34,16 @@ jobs:
           python-version: "3.13"
 
       # Pinned exactly. A site that builds today must build identically in six
-      # months (TDD 4). Bump this deliberately, in its own commit.
+      # months (TDD 4). Bump this deliberately, in its own commit, and keep the
+      # pin in step with site.console.
       - run: pip install zensical==0.0.55
 
-      # --strict fails the build on a broken internal link, rather than
-      # publishing a site with holes in it.
-      - name: Build (strict)
-        run: zensical build --clean --strict
-
-      # The old Sphinx URLs, which neither host can serve a 301 for. The script
-      # fails the run if a redirect points at a page that no longer exists.
-      - name: Write redirect stubs
-        run: python scripts/gen_redirect_stubs.py
+      # build.py runs the strict build and then writes the redirect stubs for the
+      # old Sphinx URLs, all with the Python that runs it. The build fails on a
+      # broken internal link, and the stubs fail the run if a redirect points at a
+      # page that no longer exists.
+      - name: Build
+        run: python build.py
 
       # The site sits at the root of the deploy branch because Pages can only
       # serve a branch's root or its /docs folder.

@@ -1,11 +1,14 @@
-# A console for rebuilding the site on demand. Click Build to run a full strict build into
-# site/ and write the redirect stubs, the same steps the publish workflow runs.
 [session]
 type = "python"
 
 [session.python]
 python_version = "3.13"
 dependencies = ["zensical==0.0.55"]
+script = "run build.py serve --background"
+
+[[session.trigger]]
+pattern = "redirects.csv"
+command = "run build.py redirects"
 
 [[session.shortcut]]
 label = "Build"

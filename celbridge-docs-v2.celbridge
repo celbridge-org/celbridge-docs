@@ -1,5 +1,5 @@
 [celbridge]
-celbridge-version = "1.0.0"
+celbridge-version = "1.1.0"
 project-version = "1.0.0"
 
 # 'hide' keeps resources out of the Explorer tree. 'search-exclude' also keeps them out of search.
@@ -9,16 +9,13 @@ hide = [".cache", ".DS_Store", ".github", ".gitignore", ".idea", ".venv", "site"
 search-exclude = [".cache", ".venv", "__pycache__", "site"]
 
 [[shortcut]]
-resource = "site-server.console"
-icon = "bs-1-circle-fill"
+resource = "site.console"
+icon = "bs-terminal"
 area = "bottom"
+open-on-load = true
 
 [[shortcut]]
-resource = "site_preview.webview"
-icon = "bs-2-circle-fill"
+resource = "celbridge.webview"
+icon = "bs-window"
 area = "side"
-
-[[shortcut]]
-resource = "site-re-builder.console"
-icon = "bs-3-circle-fill"
-area = "bottom"
+open-on-load = true
