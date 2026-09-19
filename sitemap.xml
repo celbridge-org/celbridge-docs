@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://learn.celbridge.org/</loc>
+      </url>
+      <url>
+        <loc>https://learn.celbridge.org/01_about/</loc>
+      </url>
+      <url>
+        <loc>https://learn.celbridge.org/01_about/faq/</loc>
+      </url>
+      <url>
+        <loc>https://learn.celbridge.org/02_setup/installation/</loc>
+      </url>
+      <url>
+        <loc>https://learn.celbridge.org/02_setup/installation_macos/</loc>
+      </url>
+      <url>
+        <loc>https://learn.celbridge.org/03_getting_started/</loc>
+      </url>
+      <url>
+        <loc>https://learn.celbridge.org/03_getting_started/python_template/</loc>
+      </url>
+      <url>
+        <loc>https://learn.celbridge.org/08_use_cases/hello_world/</loc>
+      </url>
+</urlset>

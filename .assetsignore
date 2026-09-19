@@ -1,0 +1,14 @@
+# Copied to the root of the deploy branch by .github/workflows/build-publish.yml.
+#
+# The Worker's assets directory is the branch root (see wrangler.jsonc), so the
+# clone's own .git folder sits inside it. Pages used to exclude .git, node_modules
+# and .DS_Store automatically; Workers does not, so anything not part of the site
+# has to be named here or it is uploaded and served.
+#
+# Gitignore syntax.
+.git
+.gitignore
+.nojekyll
+.assetsignore
+wrangler.jsonc
+.DS_Store
