@@ -1,7 +1,7 @@
 /* Celbridge brand layer for the Zensical/Material theme.
  *
  * TDD v01 §9.1: every colour in the site derives from this file. The palette is
- * taken from the logo (docs/images/icon2.svg) — the green ramp #31c923 → #006523,
+ * taken from the logo (docs/images/brand/logo-mark.svg) — the green ramp #31c923 → #006523,
  * the cream #efe0d8, and the slate #272832 / #494c60.
  *
  * Fonts are self-hosted (§16). `theme.font = false` in zensical.toml disables the

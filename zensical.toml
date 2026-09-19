@@ -49,8 +49,8 @@ name = "material"
 # Holds partials/source.html, which replaces the theme's repo widget with a GitHub logo.
 custom_dir = "overrides"
 language = "en"
-logo = "images/icon2.svg"
-favicon = "images/icon.svg"
+logo = "images/brand/logo-mark.svg"
+favicon = "images/brand/logo-mark.svg"
 features = [
   "content.action.edit",
   "content.code.annotate",
